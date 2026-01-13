@@ -1,0 +1,22 @@
+/* TEAM */
+    Developer: MockTestMe Team
+    Location: Global
+    Website: https://mocktestme.github.io
+
+/* THANKS */
+    Team Members: Developers, Designers, Content Creators
+    Thanks: All contributors and users
+
+/* SITE */
+    Created: 2026
+    Last Update: 2026-01-13
+    Language: English
+    Doctype: HTML5
+    IDE: Modern Text Editors
+    Technologies: HTML5, CSS3, JavaScript (ES6+)
+
+/* STANDARDS */
+    HTML5: https://html.spec.whatwg.org/
+    CSS3: https://www.w3.org/Style/CSS/
+    JavaScript: https://tc39.es/
+    Accessibility: https://www.w3.org/WAI/
