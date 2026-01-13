@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Certifications - CAPM, CFA, CSCS, PMP. Practice professional certification exams with comprehensive mock tests.">
+    <meta name="keywords" content="professional certifications, CAPM, CFA, CSCS, PMP, mock tests, certification exams">
+    <meta name="theme-color" content="#F5F1E8">
+    
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="canonical" href="https://mocktestme.github.io/categories/professional-certs.html">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Professional Certifications - MockTestMe | CAPM, CFA, CSCS, PMP</title>
+</head>
+<body>
+    <!-- Header Component -->
+    <header id="header" class="header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="../index.html" style="text-decoration: none; color: inherit;">
+                    <h1>MOCKTESTME</h1>
+                    <p class="tagline">Master. Test. Succeed.</p>
+                </a>
+            </div>
+            <nav class="nav-main">
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="../index.html#popular-tests">Popular Tests</a></li>
+                    <li><a href="../index.html#all-tests">All Tests</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-hero">
+            <h1>PROFESSIONAL CERTIFICATIONS</h1>
+            <p>Master industry-recognized professional certification exams</p>
+        </section>
+
+        <!-- Tests Grid -->
+        <section class="category-tests">
+            <div class="tests-grid" id="testsGrid">
+                <!-- Populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-box">
+                <h2>ADVANCE YOUR CAREER?</h2>
+                <p>Get certified with our comprehensive professional exam preparation</p>
+                <button class="cta-button primary">START PRACTICE TEST</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer id="footer" class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>ABOUT</h4>
+                <p>MockTestMe is your comprehensive platform for online mock tests and exam preparation.</p>
+            </div>
+            <div class="footer-section">
+                <h4>CATEGORIES</h4>
+                <ul class="footer-links">
+                    <li><a href="./standardized-tests.html">Standardized Tests</a></li>
+                    <li><a href="./language-tests.html">Language Tests</a></li>
+                    <li><a href="./medical-health.html">Medical & Health</a></li>
+                    <li><a href="./professional-certs.html">Professional Certs</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>PAGES</h4>
+                <ul class="footer-links">
+                    <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="./terms-of-service.html">Terms of Service</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MockTestMe. All rights reserved.</p>
+            <p>Domain: mocktestme.github.io</p>
+        </div>
+    </footer>
+
+    <script>
+        // Category Tests Data
+        const categoryTests = [
+            { id: 19, name: "CAPM", full: "Certified Associate in Project Management", questions: 150, time: 120, description: "Entry-level project management certification validating foundational project management knowledge." },
+            { id: 20, name: "CFA", full: "Chartered Financial Analyst", questions: 240, time: 360, description: "Investment professional certification covering ethics, financial reporting, quantitative analysis, and portfolio management." },
+            { id: 21, name: "CSCS", full: "Certified Strength and Conditioning Specialist", questions: 145, time: 120, description: "Certification for fitness professionals specializing in strength training and athletic conditioning." },
+            { id: 22, name: "PMP", full: "Project Management Professional", questions: 200, time: 230, description: "Advanced project management certification demonstrating expertise in initiating, planning, executing, and closing projects." },
+            { id: 23, name: "AWS", full: "Amazon Web Services Certification", questions: 130, time: 120, description: "Cloud computing certification validating expertise in AWS services and cloud architecture." },
+            { id: 24, name: "CompTIA", full: "CompTIA A+ Certification", questions: 220, time: 180, description: "IT fundamentals certification covering hardware, networking, software, and troubleshooting skills." }
+        ];
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const testsGrid = document.getElementById('testsGrid');
+            
+            categoryTests.forEach(test => {
+                const testCard = document.createElement('div');
+                testCard.className = 'test-card';
+                testCard.innerHTML = `
+                    <h3>${test.name}</h3>
+                    <p class="test-full">${test.full}</p>
+                    <p class="test-description">${test.description}</p>
+                    <div class="test-meta">
+                        <span>${test.questions} Questions</span>
+                        <span>${test.time} Minutes</span>
+                    </div>
+                    <button class="cta-button primary" onclick="startTest('${test.name}')">START TEST</button>
+                `;
+                testsGrid.appendChild(testCard);
+            });
+
+            // Menu toggle
+            const menuToggle = document.getElementById('menuToggle');
+            const navLinks = document.querySelector('.nav-links');
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        });
+
+        function startTest(testName) {
+            alert(`Starting ${testName} mock test - Feature coming soon!`);
+        }
+    </script>
+</body>
+</html>

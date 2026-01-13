@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MockTestMe Blog - Expert tips, study strategies, and exam preparation advice to help you succeed.">
+    <meta name="keywords" content="blog, exam tips, study strategies, test preparation, MockTestMe">
+    <meta name="theme-color" content="#F5F1E8">
+    
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="canonical" href="https://mocktestme.github.io/pages/blog.html">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Blog - MockTestMe | Exam Tips & Study Strategies</title>
+</head>
+<body>
+    <!-- Header Component -->
+    <header id="header" class="header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="../index.html" style="text-decoration: none; color: inherit;">
+                    <h1>MOCKTESTME</h1>
+                    <p class="tagline">Master. Test. Succeed.</p>
+                </a>
+            </div>
+            <nav class="nav-main">
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="../index.html#popular-tests">Popular Tests</a></li>
+                    <li><a href="../index.html#all-tests">All Tests</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Hero -->
+        <section class="page-hero">
+            <h1>MOCKTESTME BLOG</h1>
+            <p>Expert tips, study strategies, and exam insights</p>
+        </section>
+
+        <!-- Blog Posts -->
+        <section class="blog-section">
+            <div class="blog-posts" id="blogPosts">
+                <!-- Populated by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer id="footer" class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>ABOUT</h4>
+                <p>MockTestMe is your comprehensive platform for online mock tests and exam preparation.</p>
+            </div>
+            <div class="footer-section">
+                <h4>PAGES</h4>
+                <ul class="footer-links">
+                    <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="./terms-of-service.html">Terms of Service</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>CATEGORIES</h4>
+                <ul class="footer-links">
+                    <li><a href="../categories/standardized-tests.html">Standardized Tests</a></li>
+                    <li><a href="../categories/language-tests.html">Language Tests</a></li>
+                    <li><a href="../categories/medical-health.html">Medical & Health</a></li>
+                    <li><a href="../categories/professional-certs.html">Professional Certs</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MockTestMe. All rights reserved.</p>
+            <p>Domain: mocktestme.github.io</p>
+        </div>
+    </footer>
+
+    <script>
+        const blogPosts = [
+            {
+                id: 1,
+                title: "10 Proven Study Strategies for Standardized Tests",
+                date: "January 10, 2026",
+                excerpt: "Discover the most effective study techniques used by top-scoring students. Learn how to optimize your preparation time and maximize retention.",
+                category: "Study Tips"
+            },
+            {
+                id: 2,
+                title: "ACT vs SAT: Which Test is Right for You?",
+                date: "January 8, 2026",
+                excerpt: "Confused about which college entrance exam to take? We break down the differences between ACT and SAT to help you make the right choice.",
+                category: "Exam Guides"
+            },
+            {
+                id: 3,
+                title: "Time Management During Mock Tests",
+                date: "January 5, 2026",
+                excerpt: "Master the art of time management with proven strategies to allocate your test time efficiently and tackle harder questions with confidence.",
+                category: "Test Strategies"
+            },
+            {
+                id: 4,
+                title: "Language Test Preparation: IELTS vs TOEFL",
+                date: "January 1, 2026",
+                excerpt: "Preparing for an English proficiency test? Learn the key differences between IELTS and TOEFL, and which one might be better for your goals.",
+                category: "Language Tests"
+            },
+            {
+                id: 5,
+                title: "How to Analyze Your Mock Test Results",
+                date: "December 28, 2025",
+                excerpt: "Don't just take mock tests—use them strategically. Learn how to analyze your results to identify weak areas and improve your score.",
+                category: "Test Analysis"
+            },
+            {
+                id: 6,
+                title: "GRE Quantitative Reasoning: Complete Guide",
+                date: "December 25, 2025",
+                excerpt: "Master GRE math with our comprehensive guide covering quantitative reasoning concepts, problem-solving strategies, and practice tips.",
+                category: "Exam Guides"
+            }
+        ];
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const blogPostsContainer = document.getElementById('blogPosts');
+            
+            blogPosts.forEach(post => {
+                const postCard = document.createElement('article');
+                postCard.className = 'blog-post-card';
+                postCard.innerHTML = `
+                    <div class="blog-meta">
+                        <span class="blog-date">${post.date}</span>
+                        <span class="blog-category">${post.category}</span>
+                    </div>
+                    <h2>${post.title}</h2>
+                    <p>${post.excerpt}</p>
+                    <button class="cta-button primary" onclick="readPost(${post.id})">READ MORE</button>
+                `;
+                blogPostsContainer.appendChild(postCard);
+            });
+
+            // Menu toggle
+            const menuToggle = document.getElementById('menuToggle');
+            const navLinks = document.querySelector('.nav-links');
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        });
+
+        function readPost(postId) {
+            alert(`Reading blog post ${postId} - Full article feature coming soon!`);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Language Tests - IELTS, TOEFL, Duolingo English Test. Practice English proficiency exams with comprehensive mock tests.">
+    <meta name="keywords" content="language tests, IELTS, TOEFL, Duolingo English Test, English proficiency, mock tests">
+    <meta name="theme-color" content="#F5F1E8">
+    
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="canonical" href="https://mocktestme.github.io/categories/language-tests.html">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Language Tests - MockTestMe | IELTS, TOEFL, Duolingo</title>
+</head>
+<body>
+    <!-- Header Component -->
+    <header id="header" class="header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="../index.html" style="text-decoration: none; color: inherit;">
+                    <h1>MOCKTESTME</h1>
+                    <p class="tagline">Master. Test. Succeed.</p>
+                </a>
+            </div>
+            <nav class="nav-main">
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="../index.html#popular-tests">Popular Tests</a></li>
+                    <li><a href="../index.html#all-tests">All Tests</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-hero">
+            <h1>LANGUAGE TESTS</h1>
+            <p>Master international English proficiency exams</p>
+        </section>
+
+        <!-- Tests Grid -->
+        <section class="category-tests">
+            <div class="tests-grid" id="testsGrid">
+                <!-- Populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-box">
+                <h2>IMPROVE YOUR ENGLISH?</h2>
+                <p>Start practicing English proficiency tests today</p>
+                <button class="cta-button primary">START PRACTICE TEST</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer id="footer" class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>ABOUT</h4>
+                <p>MockTestMe is your comprehensive platform for online mock tests and exam preparation.</p>
+            </div>
+            <div class="footer-section">
+                <h4>CATEGORIES</h4>
+                <ul class="footer-links">
+                    <li><a href="./standardized-tests.html">Standardized Tests</a></li>
+                    <li><a href="./language-tests.html">Language Tests</a></li>
+                    <li><a href="./medical-health.html">Medical & Health</a></li>
+                    <li><a href="./professional-certs.html">Professional Certs</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>PAGES</h4>
+                <ul class="footer-links">
+                    <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="./terms-of-service.html">Terms of Service</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MockTestMe. All rights reserved.</p>
+            <p>Domain: mocktestme.github.io</p>
+        </div>
+    </footer>
+
+    <script>
+        // Category Tests Data
+        const categoryTests = [
+            { id: 7, name: "Duolingo", full: "Duolingo English Test", questions: 40, time: 60, description: "Quick, affordable English proficiency test accepted by universities worldwide." },
+            { id: 8, name: "IELTS", full: "International English Language Testing System", questions: 40, time: 180, description: "Global English assessment for universities, immigration, and professional registration." },
+            { id: 9, name: "TOEFL", full: "Test of English as a Foreign Language", questions: 120, time: 195, description: "English proficiency test for non-native speakers applying to English-speaking universities." },
+            { id: 10, name: "TOEFL iBT", full: "Test of English as a Foreign Language Internet-Based Test", questions: 120, time: 195, description: "Internet-based version of TOEFL measuring reading, writing, listening, and speaking skills." },
+            { id: 11, name: "PTE", full: "Pearson Test of English Academic", questions: 80, time: 150, description: "English proficiency test for university admission and professional registration globally." },
+            { id: 12, name: "Cambridge", full: "Cambridge English Assessment", questions: 120, time: 210, description: "Comprehensive English proficiency assessment with internationally recognized certification." }
+        ];
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const testsGrid = document.getElementById('testsGrid');
+            
+            categoryTests.forEach(test => {
+                const testCard = document.createElement('div');
+                testCard.className = 'test-card';
+                testCard.innerHTML = `
+                    <h3>${test.name}</h3>
+                    <p class="test-full">${test.full}</p>
+                    <p class="test-description">${test.description}</p>
+                    <div class="test-meta">
+                        <span>${test.questions} Questions</span>
+                        <span>${test.time} Minutes</span>
+                    </div>
+                    <button class="cta-button primary" onclick="startTest('${test.name}')">START TEST</button>
+                `;
+                testsGrid.appendChild(testCard);
+            });
+
+            // Menu toggle
+            const menuToggle = document.getElementById('menuToggle');
+            const navLinks = document.querySelector('.nav-links');
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        });
+
+        function startTest(testName) {
+            alert(`Starting ${testName} mock test - Feature coming soon!`);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Standardized Tests - ACT, SAT, GED, GMAT, GRE, LSAT. Practice with comprehensive mock tests and preparation materials.">
+    <meta name="keywords" content="standardized tests, ACT, SAT, GED, GMAT, GRE, LSAT, mock tests, practice exams">
+    <meta name="theme-color" content="#F5F1E8">
+    
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="canonical" href="https://mocktestme.github.io/categories/standardized-tests.html">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Standardized Tests - MockTestMe | ACT, SAT, GED, GMAT, GRE, LSAT</title>
+</head>
+<body>
+    <!-- Header Component -->
+    <header id="header" class="header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="../index.html" style="text-decoration: none; color: inherit;">
+                    <h1>MOCKTESTME</h1>
+                    <p class="tagline">Master. Test. Succeed.</p>
+                </a>
+            </div>
+            <nav class="nav-main">
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="../index.html#popular-tests">Popular Tests</a></li>
+                    <li><a href="../index.html#all-tests">All Tests</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-hero">
+            <h1>STANDARDIZED TESTS</h1>
+            <p>Master university admission and professional certification exams</p>
+        </section>
+
+        <!-- Tests Grid -->
+        <section class="category-tests">
+            <div class="tests-grid" id="testsGrid">
+                <!-- Populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-box">
+                <h2>READY TO SUCCEED?</h2>
+                <p>Start your standardized test preparation today</p>
+                <button class="cta-button primary">START PRACTICE TEST</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer id="footer" class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>ABOUT</h4>
+                <p>MockTestMe is your comprehensive platform for online mock tests and exam preparation.</p>
+            </div>
+            <div class="footer-section">
+                <h4>CATEGORIES</h4>
+                <ul class="footer-links">
+                    <li><a href="./standardized-tests.html">Standardized Tests</a></li>
+                    <li><a href="./language-tests.html">Language Tests</a></li>
+                    <li><a href="./medical-health.html">Medical & Health</a></li>
+                    <li><a href="./professional-certs.html">Professional Certs</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>PAGES</h4>
+                <ul class="footer-links">
+                    <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="./terms-of-service.html">Terms of Service</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MockTestMe. All rights reserved.</p>
+            <p>Domain: mocktestme.github.io</p>
+        </div>
+    </footer>
+
+    <script>
+        // Category Tests Data
+        const categoryTests = [
+            { id: 1, name: "ACT", full: "American College Testing", questions: 215, time: 180, description: "Comprehensive assessment for college admissions covering English, Math, Reading, Science, and optional Writing." },
+            { id: 2, name: "SAT", full: "Scholastic Assessment Test", questions: 154, time: 180, description: "Standardized test measuring college readiness with Evidence-Based Reading, Writing, and Math." },
+            { id: 3, name: "GED", full: "General Educational Development Test", questions: 170, time: 225, description: "High school equivalency exam covering Reasoning Through Language Arts, Math, Science, and Social Studies." },
+            { id: 4, name: "GMAT", full: "Graduate Management Admission Test", questions: 91, time: 187, description: "Graduate management admission test evaluating analytical, writing, quantitative, and verbal skills." },
+            { id: 5, name: "GRE", full: "Graduate Record Examination", questions: 170, time: 180, description: "Graduate school entrance exam assessing verbal, quantitative, and analytical writing abilities." },
+            { id: 6, name: "LSAT", full: "Law School Admission Test", questions: 101, time: 180, description: "Law school admission test focusing on logical reasoning, analytical reasoning, and reading comprehension." }
+        ];
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const testsGrid = document.getElementById('testsGrid');
+            
+            categoryTests.forEach(test => {
+                const testCard = document.createElement('div');
+                testCard.className = 'test-card';
+                testCard.innerHTML = `
+                    <h3>${test.name}</h3>
+                    <p class="test-full">${test.full}</p>
+                    <p class="test-description">${test.description}</p>
+                    <div class="test-meta">
+                        <span>${test.questions} Questions</span>
+                        <span>${test.time} Minutes</span>
+                    </div>
+                    <button class="cta-button primary" onclick="startTest('${test.name}')">START TEST</button>
+                `;
+                testsGrid.appendChild(testCard);
+            });
+
+            // Menu toggle
+            const menuToggle = document.getElementById('menuToggle');
+            const navLinks = document.querySelector('.nav-links');
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        });
+
+        function startTest(testName) {
+            alert(`Starting ${testName} mock test - Feature coming soon!`);
+        }
+    </script>
+</body>
+</html>
