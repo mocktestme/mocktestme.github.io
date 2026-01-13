@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PTE Academic Practice Test with real questions. Pearson Test of English for university admission and professional registration worldwide.">
+    <meta name="keywords" content="PTE Academic, PTE practice test, English proficiency, university admission, professional certification, language test">
+    <meta name="theme-color" content="#F5F1E8">
+    
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="canonical" href="https://mocktestme.github.io/tests/pte-practice-test.html">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/test-styles.css">
+    <title>PTE Academic Practice Test - MockTestMe</title>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "PTE Academic Practice Test",
+      "description": "Interactive PTE Academic practice test with real questions",
+      "url": "https://mocktestme.github.io/tests/pte-practice-test.html",
+      "applicationCategory": "EducationalApplication",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "2100"
+      }
+    }
+    </script>
+</head>
+<body>
+    <header id="header" class="header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="../index.html" style="text-decoration: none; color: inherit;">
+                    <h1>MOCKTESTME</h1>
+                    <p class="tagline">Master. Test. Succeed.</p>
+                </a>
+            </div>
+            <nav class="nav-main">
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="../index.html#popular-tests">Popular Tests</a></li>
+                    <li><a href="../categories/language-tests.html">Language Tests</a></li>
+                    <li><a href="../pages/about.html">About</a></li>
+                    <li><a href="../pages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="test-header-section">
+            <div class="test-info">
+                <h1>PTE ACADEMIC PRACTICE TEST</h1>
+                <p>Pearson Test of English - Global Assessment</p>
+                <div class="test-meta">
+                    <span class="meta-item">📊 10 Questions (Sample)</span>
+                    <span class="meta-item">⏱️ 60 Minutes</span>
+                    <span class="meta-item">📈 All Sections</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="test-container">
+            <aside class="test-sidebar">
+                <h3>QUESTION NAVIGATOR</h3>
+                <div class="question-nav" id="questionNav"></div>
+                <div class="progress-section">
+                    <h4>PROGRESS</h4>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <p id="progressText">0 of 10 Complete</p>
+                </div>
+            </aside>
+
+            <div class="test-main">
+                <div class="test-intro" id="testIntro">
+                    <h2>PTE ACADEMIC PRACTICE TEST</h2>
+                    <div class="intro-content">
+                        <h3>Test Overview</h3>
+                        <p>PTE Academic assesses English proficiency in:</p>
+                        <ul>
+                            <li><strong>Speaking & Writing:</strong> Integrated tasks testing real English usage</li>
+                            <li><strong>Reading:</strong> Comprehensive reading comprehension</li>
+                            <li><strong>Listening:</strong> Academic lectures and conversations</li>
+                        </ul>
+                        <h3>Test Details</h3>
+                        <ul>
+                            <li>Total duration: 2 hours</li>
+                            <li>Score range: 10-90 (reported in 10-point increments)</li>
+                            <li>Accepted by universities and professional organizations worldwide</li>
+                        </ul>
+                        <button class="cta-button primary" id="startBtn">START TEST</button>
+                    </div>
+                </div>
+
+                <div class="questions-container" id="questionsContainer" style="display: none;"></div>
+
+                <div class="results-screen" id="resultsScreen" style="display: none;">
+                    <h2>TEST COMPLETED</h2>
+                    <div class="results-content">
+                        <div class="score-box">
+                            <p class="score-label">Overall Score</p>
+                            <p class="score-value" id="scoreValue">0/90</p>
+                            <p class="score-percentage" id="scorePercentage">0%</p>
+                        </div>
+                        <div class="results-detail">
+                            <h3>DETAILED BREAKDOWN</h3>
+                            <div id="detailedResults"></div>
+                        </div>
+                        <div class="results-actions">
+                            <button class="cta-button primary" id="reviewBtn">REVIEW ANSWERS</button>
+                            <button class="cta-button secondary" id="retakeBtn">RETAKE TEST</button>
+                            <a href="../categories/language-tests.html" class="cta-button secondary">BACK TO TESTS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="test-description">
+            <h2>ABOUT PTE ACADEMIC</h2>
+            <div class="description-content">
+                <p>The Pearson Test of English (PTE) Academic is a computer-delivered English proficiency test developed by Pearson. It is widely accepted by universities and professional organizations worldwide for assessing the English language skills of non-native speakers.</p>
+                <h3>Key Advantages</h3>
+                <p>PTE Academic offers quick turnaround times (results in 5 business days), flexible test scheduling, and AI-powered scoring that provides objective assessment. It is particularly popular among students applying to universities in Australia, Canada, and increasingly in the UK and USA.</p>
+                <h3>Scoring System</h3>
+                <p>PTE Academic scores range from 10-90, with scores reported in 10-point increments. Each skill (Speaking, Writing, Reading, Listening) is scored from 10-90, and an overall score is calculated.</p>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h2>FREQUENTLY ASKED QUESTIONS</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h4>What is the difference between PTE and other English tests?</h4>
+                    <p>PTE is fully computer-based with AI scoring, has flexible test dates, faster results, and is particularly strong in Australia. It is also generally cheaper than IELTS and TOEFL and has more test centers globally.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How long is PTE Academic?</h4>
+                    <p>The test takes exactly 2 hours from start to finish. This includes all sections: Speaking & Writing, Reading, and Listening.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What is a good PTE score?</h4>
+                    <p>A score of 60-65 is generally considered good for most university programs. Top universities may require 70+. Most professional organizations accept scores of 70 and above.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How often can I retake PTE?</h4>
+                    <p>You can take PTE as many times as you want. Test centers typically offer multiple dates per week, making it easy to retake if needed.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Do universities accept PTE instead of IELTS?</h4>
+                    <p>Yes, over 3,000 institutions worldwide accept PTE Academic, including major universities in the US, UK, Canada, and Australia. Check with your target university for their specific requirements.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>ABOUT</h4>
+                <p>MockTestMe is your comprehensive platform for online mock tests and exam preparation.</p>
+            </div>
+            <div class="footer-section">
+                <h4>POPULAR TESTS</h4>
+                <ul class="footer-links">
+                    <li><a href="../tests/sat-practice-test.html">SAT Practice Test</a></li>
+                    <li><a href="../tests/ielts-practice-test.html">IELTS Practice Test</a></li>
+                    <li><a href="../tests/gre-practice-test.html">GRE Practice Test</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>PAGES</h4>
+                <ul class="footer-links">
+                    <li><a href="../pages/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="../pages/terms-of-service.html">Terms of Service</a></li>
+                    <li><a href="../pages/contact.html">Contact Us</a></li>
+                    <li><a href="../pages/blog.html">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MockTestMe. All rights reserved.</p>
+            <p>Domain: mocktestme.github.io</p>
+        </div>
+    </footer>
+
+    <script src="../js/test-engine.js"></script>
+    <script>
+        const ptePracticeTest = [
+            {
+                id: 1,
+                section: "Reading",
+                question: "What does the passage suggest about artificial intelligence in healthcare?",
+                options: [
+                    { text: "It will completely replace doctors", isCorrect: false },
+                    { text: "It has potential to improve diagnostic accuracy and patient outcomes", isCorrect: true },
+                    { text: "It is not yet applicable in medical settings", isCorrect: false },
+                    { text: "It is only useful for research purposes", isCorrect: false }
+                ],
+                explanation: "The passage discusses how AI can enhance diagnostic capabilities and improve healthcare delivery while emphasizing the continued importance of human expertise."
+            },
+            {
+                id: 2,
+                section: "Reading",
+                question: "According to the text, why is data security important in healthcare IT systems?",
+                options: [
+                    { text: "It reduces operational costs", isCorrect: false },
+                    { text: "It protects patient privacy and maintains data integrity", isCorrect: true },
+                    { text: "It speeds up data processing", isCorrect: false },
+                    { text: "It eliminates the need for IT staff", isCorrect: false }
+                ],
+                explanation: "Healthcare data contains sensitive patient information, so robust security measures are essential to maintain privacy, comply with regulations, and prevent breaches."
+            },
+            {
+                id: 3,
+                section: "Writing",
+                question: "Which option best completes this sentence? 'The research team _____ their findings in a peer-reviewed journal.'",
+                options: [
+                    { text: "is publishing", isCorrect: false },
+                    { text: "published", isCorrect: true },
+                    { text: "publishes", isCorrect: false },
+                    { text: "will be publishing", isCorrect: false }
+                ],
+                explanation: "The past tense 'published' correctly indicates a completed action. 'Is publishing' would suggest ongoing action at present time."
+            },
+            {
+                id: 4,
+                section: "Reading",
+                question: "What can be inferred about the adoption of new technologies in developing countries?",
+                options: [
+                    { text: "It is always successful and beneficial", isCorrect: false },
+                    { text: "It faces challenges including infrastructure and cost barriers", isCorrect: true },
+                    { text: "It is not necessary for their development", isCorrect: false },
+                    { text: "It should be prevented to preserve traditional practices", isCorrect: false }
+                ],
+                explanation: "The passage discusses how developing nations must overcome significant financial and infrastructure challenges to adopt modern technology effectively."
+            },
+            {
+                id: 5,
+                section: "Writing",
+                question: "Complete: 'Unless the government _____ strict environmental policies, pollution will continue to increase.'",
+                options: [
+                    { text: "implements", isCorrect: true },
+                    { text: "will implement", isCorrect: false },
+                    { text: "is implementing", isCorrect: false },
+                    { text: "has implemented", isCorrect: false }
+                ],
+                explanation: "In conditionals with 'unless,' the present tense is used in the conditional clause: 'Unless the government implements' (present) + will continue (future)."
+            },
+            {
+                id: 6,
+                section: "Reading",
+                question: "How does the author support the argument about climate change?",
+                options: [
+                    { text: "By presenting only theoretical models", isCorrect: false },
+                    { text: "By citing scientific data and research studies", isCorrect: true },
+                    { text: "By relying on personal anecdotes", isCorrect: false },
+                    { text: "By making unsupported claims", isCorrect: false }
+                ],
+                explanation: "The passage backs its arguments about climate change with empirical evidence, peer-reviewed research, and scientific data from reliable sources."
+            },
+            {
+                id: 7,
+                section: "Writing",
+                question: "Which sentence uses correct subject-verb agreement?",
+                options: [
+                    { text: "The group of researchers are conducting a study", isCorrect: false },
+                    { text: "The group of researchers is conducting a study", isCorrect: true },
+                    { text: "The group of researchers have conducted a study", isCorrect: false },
+                    { text: "The researchers group is conducting studies", isCorrect: false }
+                ],
+                explanation: "'Group' is a collective noun treated as a singular unit, so it takes 'is,' not 'are.' Thus 'is conducting' is correct."
+            },
+            {
+                id: 8,
+                section: "Reading",
+                question: "What is the main purpose of the passage about renewable energy?",
+                options: [
+                    { text: "To criticize renewable energy initiatives", isCorrect: false },
+                    { text: "To explain the importance and benefits of renewable energy transition", isCorrect: true },
+                    { text: "To prove that renewable energy is impossible", isCorrect: false },
+                    { text: "To describe only solar power technology", isCorrect: false }
+                ],
+                explanation: "The passage focuses on explaining why renewable energy is crucial for sustainability and discussing various benefits of the energy transition."
+            },
+            {
+                id: 9,
+                section: "Writing",
+                question: "Select the sentence with correct pronoun usage:",
+                options: [
+                    { text: "Between you and I, the project seems unfeasible", isCorrect: false },
+                    { text: "Between you and me, the project seems unfeasible", isCorrect: true },
+                    { text: "Between you and him, the project seems unfeasible", isCorrect: false },
+                    { text: "Between we and they, the project seems unfeasible", isCorrect: false }
+                ],
+                explanation: "After prepositions like 'between,' the objective pronoun 'me' is used, not the subjective 'I.' The phrase 'between you and me' is correct."
+            },
+            {
+                id: 10,
+                section: "Reading",
+                question: "According to the passage, what role does innovation play in economic growth?",
+                options: [
+                    { text: "It has no significant impact", isCorrect: false },
+                    { text: "It drives productivity improvements and creates new industries", isCorrect: true },
+                    { text: "It only benefits wealthy nations", isCorrect: false },
+                    { text: "It is harmful to traditional economies", isCorrect: false }
+                ],
+                explanation: "The passage demonstrates how innovation leads to increased productivity, new market opportunities, and sustainable economic development across different regions."
+            }
+        ];
+
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeTest(ptePracticeTest, "PTE Academic");
+            
+            const menuToggle = document.getElementById('menuToggle');
+            const navLinks = document.querySelector('.nav-links');
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

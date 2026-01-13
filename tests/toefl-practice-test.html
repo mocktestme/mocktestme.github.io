@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TOEFL Practice Test with real questions. Test your English proficiency for university admission with Reading, Writing, Listening, and Speaking sections.">
+    <meta name="keywords" content="TOEFL practice test, TOEFL questions, English proficiency, TOEFL iBT, university admission, language test">
+    <meta name="theme-color" content="#F5F1E8">
+    
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="canonical" href="https://mocktestme.github.io/tests/toefl-practice-test.html">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/test-styles.css">
+    <title>TOEFL Practice Test - MockTestMe</title>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "TOEFL Practice Test",
+      "description": "Interactive TOEFL practice test with real questions for university admission preparation",
+      "url": "https://mocktestme.github.io/tests/toefl-practice-test.html",
+      "applicationCategory": "EducationalApplication",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "2800"
+      }
+    }
+    </script>
+</head>
+<body>
+    <header id="header" class="header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="../index.html" style="text-decoration: none; color: inherit;">
+                    <h1>MOCKTESTME</h1>
+                    <p class="tagline">Master. Test. Succeed.</p>
+                </a>
+            </div>
+            <nav class="nav-main">
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="../index.html#popular-tests">Popular Tests</a></li>
+                    <li><a href="../categories/language-tests.html">Language Tests</a></li>
+                    <li><a href="../pages/about.html">About</a></li>
+                    <li><a href="../pages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="test-header-section">
+            <div class="test-info">
+                <h1>TOEFL PRACTICE TEST</h1>
+                <p>Test of English as a Foreign Language - Full Practice Exam</p>
+                <div class="test-meta">
+                    <span class="meta-item">📊 10 Questions (Sample)</span>
+                    <span class="meta-item">⏱️ 90 Minutes</span>
+                    <span class="meta-item">📈 All Sections</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="test-container">
+            <aside class="test-sidebar">
+                <h3>QUESTION NAVIGATOR</h3>
+                <div class="question-nav" id="questionNav"></div>
+                <div class="progress-section">
+                    <h4>PROGRESS</h4>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <p id="progressText">0 of 10 Complete</p>
+                </div>
+            </aside>
+
+            <div class="test-main">
+                <div class="test-intro" id="testIntro">
+                    <h2>TOEFL PRACTICE TEST</h2>
+                    <div class="intro-content">
+                        <h3>Test Overview</h3>
+                        <p>This comprehensive TOEFL practice test covers:</p>
+                        <ul>
+                            <li><strong>Reading:</strong> Academic passages and vocabulary comprehension</li>
+                            <li><strong>Writing:</strong> Integrated and independent essay writing</li>
+                            <li><strong>Listening:</strong> Academic lectures and conversations</li>
+                            <li><strong>Speaking:</strong> Integrated and independent speaking tasks</li>
+                        </ul>
+                        <h3>Test Format (iBT)</h3>
+                        <ul>
+                            <li>Total score range: 0-120</li>
+                            <li>Each section scored 0-30</li>
+                            <li>Total duration: 3 hours</li>
+                        </ul>
+                        <button class="cta-button primary" id="startBtn">START TEST</button>
+                    </div>
+                </div>
+
+                <div class="questions-container" id="questionsContainer" style="display: none;"></div>
+
+                <div class="results-screen" id="resultsScreen" style="display: none;">
+                    <h2>TEST COMPLETED</h2>
+                    <div class="results-content">
+                        <div class="score-box">
+                            <p class="score-label">Total Score</p>
+                            <p class="score-value" id="scoreValue">0/120</p>
+                            <p class="score-percentage" id="scorePercentage">0%</p>
+                        </div>
+                        <div class="results-detail">
+                            <h3>DETAILED BREAKDOWN</h3>
+                            <div id="detailedResults"></div>
+                        </div>
+                        <div class="results-actions">
+                            <button class="cta-button primary" id="reviewBtn">REVIEW ANSWERS</button>
+                            <button class="cta-button secondary" id="retakeBtn">RETAKE TEST</button>
+                            <a href="../categories/language-tests.html" class="cta-button secondary">BACK TO TESTS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="test-description">
+            <h2>ABOUT TOEFL</h2>
+            <div class="description-content">
+                <p>The Test of English as a Foreign Language (TOEFL) is a standardized test that measures the English language ability of non-native speakers. It is widely accepted by universities, colleges, and organizations worldwide, particularly in the United States and Canada.</p>
+                <h3>TOEFL iBT Format</h3>
+                <p>The TOEFL iBT (Internet-Based Test) is the current standard format. It assesses reading, writing, listening, and speaking skills through integrated and independent tasks that simulate academic English usage.</p>
+                <h3>Score Interpretation</h3>
+                <p>TOEFL iBT scores range from 0-120, with each section (Reading, Listening, Writing, Speaking) scored from 0-30. Most universities require a minimum score of 80-100 for undergraduate admission.</p>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h2>FREQUENTLY ASKED QUESTIONS</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h4>What is the difference between TOEFL and IELTS?</h4>
+                    <p>Both are English proficiency tests, but TOEFL is primarily used for US/Canadian university admission, while IELTS is more internationally recognized. TOEFL uses a 0-120 scale while IELTS uses 0-9 bands.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How long is the TOEFL test?</h4>
+                    <p>The TOEFL iBT takes approximately 3 hours to complete, including breaks. The test cannot be interrupted, so plan accordingly.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What is a good TOEFL score?</h4>
+                    <p>A score of 80-100 is generally considered good for university admission. Elite universities often require 100+. Your target depends on the institution's requirements.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Can I use a calculator on TOEFL?</h4>
+                    <p>No, calculators are not permitted on the TOEFL. You may need to perform some mathematical calculations, but a calculator is not provided.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How often can I take TOEFL?</h4>
+                    <p>You can take TOEFL as many times as you want. Test dates are available year-round. Most institutions accept your highest score.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>ABOUT</h4>
+                <p>MockTestMe is your comprehensive platform for online mock tests and exam preparation.</p>
+            </div>
+            <div class="footer-section">
+                <h4>POPULAR TESTS</h4>
+                <ul class="footer-links">
+                    <li><a href="../tests/sat-practice-test.html">SAT Practice Test</a></li>
+                    <li><a href="../tests/ielts-practice-test.html">IELTS Practice Test</a></li>
+                    <li><a href="../tests/gre-practice-test.html">GRE Practice Test</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>PAGES</h4>
+                <ul class="footer-links">
+                    <li><a href="../pages/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="../pages/terms-of-service.html">Terms of Service</a></li>
+                    <li><a href="../pages/contact.html">Contact Us</a></li>
+                    <li><a href="../pages/blog.html">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MockTestMe. All rights reserved.</p>
+            <p>Domain: mocktestme.github.io</p>
+        </div>
+    </footer>
+
+    <script src="../js/test-engine.js"></script>
+    <script>
+        const toeflPracticeTest = [
+            {
+                id: 1,
+                section: "Reading",
+                question: "What is the main purpose of the photosynthesis passage?",
+                options: [
+                    { text: "To explain how plants convert light energy", isCorrect: true },
+                    { text: "To describe different types of plants", isCorrect: false },
+                    { text: "To compare photosynthesis and respiration", isCorrect: false },
+                    { text: "To argue for more plant research", isCorrect: false }
+                ],
+                explanation: "The passage primarily focuses on explaining the mechanism of photosynthesis and how plants convert light energy into chemical energy."
+            },
+            {
+                id: 2,
+                section: "Reading",
+                question: "According to the passage, what happens during the light-dependent reactions?",
+                options: [
+                    { text: "Carbon dioxide is fixed into glucose", isCorrect: false },
+                    { text: "Water is split and oxygen is released", isCorrect: true },
+                    { text: "ATP is consumed", isCorrect: false },
+                    { text: "Chlorophyll absorbs darkness", isCorrect: false }
+                ],
+                explanation: "The light-dependent reactions occur in the thylakoid membranes where light energy splits water molecules, releasing oxygen and producing ATP and NADPH."
+            },
+            {
+                id: 3,
+                section: "Listening",
+                question: "What is the student's main concern about the research project?",
+                options: [
+                    { text: "Not enough time to complete it", isCorrect: true },
+                    { text: "Lack of required resources", isCorrect: false },
+                    { text: "Too many group members", isCorrect: false },
+                    { text: "Unclear instructions", isCorrect: false }
+                ],
+                explanation: "In the conversation, the student clearly states that the deadline is very soon and there isn't enough time for proper research and analysis."
+            },
+            {
+                id: 4,
+                section: "Writing",
+                question: "What is an integrated writing task in TOEFL?",
+                options: [
+                    { text: "Writing only from personal experience", isCorrect: false },
+                    { text: "Reading a passage, listening to a lecture, then writing about both", isCorrect: true },
+                    { text: "Writing without any preparation", isCorrect: false },
+                    { text: "Writing only based on listening", isCorrect: false }
+                ],
+                explanation: "TOEFL integrated writing requires students to read a passage, listen to a related lecture, and write a summary of how the lecture contradicts or supports the passage."
+            },
+            {
+                id: 5,
+                section: "Speaking",
+                question: "In TOEFL Speaking Task 1, what type of question is typically asked?",
+                options: [
+                    { text: "Personal preference on a familiar topic", isCorrect: true },
+                    { text: "Complex academic questions", isCorrect: false },
+                    { text: "Questions about a lecture", isCorrect: false },
+                    { text: "Questions requiring reading first", isCorrect: false }
+                ],
+                explanation: "Speaking Task 1 asks you to give your opinion on a familiar topic, such as 'Describe a person who has influenced you' or 'What is your favorite type of food?'"
+            },
+            {
+                id: 6,
+                section: "Reading",
+                question: "What can be inferred about ecosystems from this passage?",
+                options: [
+                    { text: "They are completely stable and unchanging", isCorrect: false },
+                    { text: "They are interconnected systems that depend on biodiversity", isCorrect: true },
+                    { text: "They function independently of other systems", isCorrect: false },
+                    { text: "They do not require sunlight to function", isCorrect: false }
+                ],
+                explanation: "The passage emphasizes that ecosystems are complex, interconnected systems where the loss of one species can have cascading effects on the entire system."
+            },
+            {
+                id: 7,
+                section: "Listening",
+                question: "Why does the professor mention the historical context?",
+                options: [
+                    { text: "To entertain the class", isCorrect: false },
+                    { text: "To help students understand the modern implications", isCorrect: true },
+                    { text: "To compare different time periods", isCorrect: false },
+                    { text: "To criticize past decisions", isCorrect: false }
+                ],
+                explanation: "The professor uses historical context to show how past events have shaped current situations, helping students understand the relevance of the topic."
+            },
+            {
+                id: 8,
+                section: "Writing",
+                question: "How many minutes do you have for the independent writing task?",
+                options: [
+                    { text: "20 minutes", isCorrect: false },
+                    { text: "30 minutes", isCorrect: true },
+                    { text: "45 minutes", isCorrect: false },
+                    { text: "60 minutes", isCorrect: false }
+                ],
+                explanation: "The TOEFL independent writing task (essay) gives you 30 minutes to plan, write, and review your response. A minimum of 300 words is expected."
+            },
+            {
+                id: 9,
+                section: "Reading",
+                question: "What does the author suggest about renewable energy adoption?",
+                options: [
+                    { text: "It is too expensive for developing countries", isCorrect: false },
+                    { text: "It requires policy changes and investment but is essential", isCorrect: true },
+                    { text: "It should be adopted immediately everywhere", isCorrect: false },
+                    { text: "It is not as important as fossil fuels", isCorrect: false }
+                ],
+                explanation: "The author acknowledges the challenges but argues that renewable energy adoption is necessary and requires coordinated efforts in policy and investment."
+            },
+            {
+                id: 10,
+                section: "Speaking",
+                question: "How much time do you get to speak in Task 2?",
+                options: [
+                    { text: "30 seconds", isCorrect: false },
+                    { text: "1 minute", isCorrect: true },
+                    { text: "2 minutes", isCorrect: false },
+                    { text: "3 minutes", isCorrect: false }
+                ],
+                explanation: "In TOEFL Speaking Task 2, you have 20 seconds to prepare and 60 seconds to speak about a topic related to campus life or academic subjects."
+            }
+        ];
+
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeTest(toeflPracticeTest, "TOEFL");
+            
+            const menuToggle = document.getElementById('menuToggle');
+            const navLinks = document.querySelector('.nav-links');
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

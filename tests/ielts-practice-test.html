@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="IELTS Practice Test with real questions. Test your English proficiency in Reading, Writing, Listening, and Speaking sections.">
+    <meta name="keywords" content="IELTS practice test, IELTS questions, English proficiency test, IELTS preparation, language test">
+    <meta name="theme-color" content="#F5F1E8">
+    
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="canonical" href="https://mocktestme.github.io/tests/ielts-practice-test.html">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/test-styles.css">
+    <title>IELTS Practice Test - MockTestMe</title>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "IELTS Practice Test",
+      "description": "Interactive IELTS practice test with real questions covering Reading, Writing, Listening, and Speaking",
+      "url": "https://mocktestme.github.io/tests/ielts-practice-test.html",
+      "applicationCategory": "EducationalApplication",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "3200"
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Header Component -->
+    <header id="header" class="header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="../index.html" style="text-decoration: none; color: inherit;">
+                    <h1>MOCKTESTME</h1>
+                    <p class="tagline">Master. Test. Succeed.</p>
+                </a>
+            </div>
+            <nav class="nav-main">
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="../index.html#popular-tests">Popular Tests</a></li>
+                    <li><a href="../categories/language-tests.html">Language Tests</a></li>
+                    <li><a href="../pages/about.html">About</a></li>
+                    <li><a href="../pages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="test-header-section">
+            <div class="test-info">
+                <h1>IELTS PRACTICE TEST</h1>
+                <p>International English Language Testing System - Full Practice Exam</p>
+                <div class="test-meta">
+                    <span class="meta-item">📊 10 Questions (Sample)</span>
+                    <span class="meta-item">⏱️ 60 Minutes</span>
+                    <span class="meta-item">📈 All Sections</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="test-container">
+            <aside class="test-sidebar">
+                <h3>QUESTION NAVIGATOR</h3>
+                <div class="question-nav" id="questionNav"></div>
+                <div class="progress-section">
+                    <h4>PROGRESS</h4>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <p id="progressText">0 of 10 Complete</p>
+                </div>
+            </aside>
+
+            <div class="test-main">
+                <div class="test-intro" id="testIntro">
+                    <h2>IELTS PRACTICE TEST</h2>
+                    <div class="intro-content">
+                        <h3>Test Overview</h3>
+                        <p>This comprehensive IELTS practice test covers:</p>
+                        <ul>
+                            <li><strong>Reading:</strong> Academic passages and comprehension questions</li>
+                            <li><strong>Writing:</strong> Task 1 (diagram description) and Task 2 (essay)</li>
+                            <li><strong>Listening:</strong> Conversation and lecture understanding</li>
+                            <li><strong>Speaking:</strong> Interview, cue card, and discussion</li>
+                        </ul>
+                        <h3>Test Format</h3>
+                        <ul>
+                            <li>Band score range: 0-9</li>
+                            <li>Total test duration: 2 hours 45 minutes</li>
+                            <li>Results include overall band score and component scores</li>
+                        </ul>
+                        <button class="cta-button primary" id="startBtn">START TEST</button>
+                    </div>
+                </div>
+
+                <div class="questions-container" id="questionsContainer" style="display: none;"></div>
+
+                <div class="results-screen" id="resultsScreen" style="display: none;">
+                    <h2>TEST COMPLETED</h2>
+                    <div class="results-content">
+                        <div class="score-box">
+                            <p class="score-label">Overall Band Score</p>
+                            <p class="score-value" id="scoreValue">0/10</p>
+                            <p class="score-percentage" id="scorePercentage">0%</p>
+                        </div>
+                        <div class="results-detail">
+                            <h3>DETAILED BREAKDOWN</h3>
+                            <div id="detailedResults"></div>
+                        </div>
+                        <div class="results-actions">
+                            <button class="cta-button primary" id="reviewBtn">REVIEW ANSWERS</button>
+                            <button class="cta-button secondary" id="retakeBtn">RETAKE TEST</button>
+                            <a href="../categories/language-tests.html" class="cta-button secondary">BACK TO TESTS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Description Section -->
+        <section class="test-description">
+            <h2>ABOUT IELTS</h2>
+            <div class="description-content">
+                <p>The International English Language Testing System (IELTS) is a standardized test for assessing English language proficiency. Developed by British Council, IDP IELTS Australia, and Cambridge Assessment English, it is widely recognized by universities, employers, and immigration authorities worldwide.</p>
+                <h3>Test Structure</h3>
+                <p>IELTS has two versions: Academic and General Training. The Academic version is primarily for university admission, while the General Training version is for work or immigration purposes.</p>
+                <h3>Scoring System</h3>
+                <p>IELTS is scored on a 9-band scale, with each band representing a different proficiency level from non-user (1) to expert user (9). The overall band score is the average of the four component scores (Listening, Reading, Writing, Speaking).</p>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <h2>FREQUENTLY ASKED QUESTIONS</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h4>What is a passing IELTS score?</h4>
+                    <p>There is no fixed "passing" score for IELTS. Different institutions have different requirements. Most universities require a band score of 6.0-7.0, while some professional bodies may require 7.5 or higher.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How long is the IELTS test?</h4>
+                    <p>The IELTS test takes 2 hours and 45 minutes in total. Listening (30 minutes), Reading (60 minutes), Writing (60 minutes), and Speaking (11-14 minutes) are conducted on the same day.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How is IELTS scored?</h4>
+                    <p>IELTS is scored on a 9-band scale for each component. The overall score is calculated as the average of the four component scores, rounded to the nearest 0.5 band.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How often can I take IELTS?</h4>
+                    <p>You can take IELTS as many times as you want. However, most people take it 1-3 times depending on their score goals. Test dates are available year-round.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What is the validity period of IELTS scores?</h4>
+                    <p>IELTS scores are valid for 2 years from the date of the test. After that, you may need to retake the test if an institution requires current scores.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>ABOUT</h4>
+                <p>MockTestMe is your comprehensive platform for online mock tests and exam preparation.</p>
+            </div>
+            <div class="footer-section">
+                <h4>POPULAR TESTS</h4>
+                <ul class="footer-links">
+                    <li><a href="../tests/sat-practice-test.html">SAT Practice Test</a></li>
+                    <li><a href="../tests/ielts-practice-test.html">IELTS Practice Test</a></li>
+                    <li><a href="../tests/gre-practice-test.html">GRE Practice Test</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>PAGES</h4>
+                <ul class="footer-links">
+                    <li><a href="../pages/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="../pages/terms-of-service.html">Terms of Service</a></li>
+                    <li><a href="../pages/contact.html">Contact Us</a></li>
+                    <li><a href="../pages/blog.html">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MockTestMe. All rights reserved.</p>
+            <p>Domain: mocktestme.github.io</p>
+        </div>
+    </footer>
+
+    <script src="../js/test-engine.js"></script>
+    <script>
+        const ieltsPracticeTest = [
+            {
+                id: 1,
+                section: "Reading",
+                question: "According to the passage, what is the primary cause of climate change?",
+                options: [
+                    { text: "Natural volcanic activity", isCorrect: false },
+                    { text: "Human activities increasing greenhouse gas emissions", isCorrect: true },
+                    { text: "Solar radiation variations", isCorrect: false },
+                    { text: "Ocean temperature fluctuations", isCorrect: false }
+                ],
+                explanation: "The passage clearly states that human activities, particularly the burning of fossil fuels and deforestation, are the primary drivers of increased greenhouse gas emissions leading to climate change."
+            },
+            {
+                id: 2,
+                section: "Reading",
+                question: "What does the author imply about renewable energy sources?",
+                options: [
+                    { text: "They are too expensive to implement", isCorrect: false },
+                    { text: "They are essential for combating climate change", isCorrect: true },
+                    { text: "They are less effective than fossil fuels", isCorrect: false },
+                    { text: "They should replace all energy sources immediately", isCorrect: false }
+                ],
+                explanation: "The author presents renewable energy as a critical component in mitigating climate change effects, though implementation challenges and costs are acknowledged."
+            },
+            {
+                id: 3,
+                section: "Listening",
+                question: "What time should the student meet the professor?",
+                options: [
+                    { text: "2:00 PM", isCorrect: false },
+                    { text: "3:30 PM", isCorrect: true },
+                    { text: "4:00 PM", isCorrect: false },
+                    { text: "2:30 PM", isCorrect: false }
+                ],
+                explanation: "In the audio conversation, the professor clearly states that the office hours are from 2:30 to 3:30 PM, and the student should arrive at 3:30 PM."
+            },
+            {
+                id: 4,
+                section: "Writing",
+                question: "Which statement best describes an effective introduction for Task 2?",
+                options: [
+                    { text: "It should only contain the thesis statement", isCorrect: false },
+                    { text: "It should introduce the topic, provide context, and state your position", isCorrect: true },
+                    { text: "It should be as long as possible", isCorrect: false },
+                    { text: "It should include all supporting details", isCorrect: false }
+                ],
+                explanation: "A strong IELTS Task 2 introduction paraphrases the question, provides context about the topic, and clearly states the writer's position or thesis."
+            },
+            {
+                id: 5,
+                section: "Speaking",
+                question: "When answering the cue card, how long should you speak?",
+                options: [
+                    { text: "30 seconds", isCorrect: false },
+                    { text: "1-2 minutes", isCorrect: true },
+                    { text: "3 minutes", isCorrect: false },
+                    { text: "As long as possible", isCorrect: false }
+                ],
+                explanation: "The IELTS Speaking Part 2 cue card task requires you to speak for 1-2 minutes. The examiner will stop you after 2 minutes if you haven't finished."
+            },
+            {
+                id: 6,
+                section: "Reading",
+                question: "What is the main idea of the passage about biodiversity loss?",
+                options: [
+                    { text: "Extinction is a natural process", isCorrect: false },
+                    { text: "Habitat destruction is causing unprecedented species extinction rates", isCorrect: true },
+                    { text: "Animals can easily adapt to environmental changes", isCorrect: false },
+                    { text: "Conservation efforts are ineffective", isCorrect: false }
+                ],
+                explanation: "The passage emphasizes that current extinction rates are 100-1,000 times higher than natural background rates due to habitat loss from human activities."
+            },
+            {
+                id: 7,
+                section: "Listening",
+                question: "According to the speaker, what is a key factor in successful language learning?",
+                options: [
+                    { text: "Studying grammar rules intensively", isCorrect: false },
+                    { text: "Regular practice and consistent exposure", isCorrect: true },
+                    { text: "Memorizing vocabulary lists", isCorrect: false },
+                    { text: "Taking expensive courses", isCorrect: false }
+                ],
+                explanation: "The speaker emphasizes that consistent daily practice and immersion are more important than sporadic intensive study for language acquisition."
+            },
+            {
+                id: 8,
+                section: "Writing",
+                question: "What is the recommended word count for IELTS Task 1?",
+                options: [
+                    { text: "At least 100 words", isCorrect: false },
+                    { text: "Minimum 150 words", isCorrect: true },
+                    { text: "Exactly 250 words", isCorrect: false },
+                    { text: "No word limit", isCorrect: false }
+                ],
+                explanation: "IELTS Task 1 requires a minimum of 150 words. Writing fewer words will result in a penalty. Task 2 requires a minimum of 250 words."
+            },
+            {
+                id: 9,
+                section: "Reading",
+                question: "Why does the author mention technological advancements in the passage?",
+                options: [
+                    { text: "To criticize modern technology", isCorrect: false },
+                    { text: "To show how technology can help address environmental issues", isCorrect: true },
+                    { text: "To argue that technology is the only solution", isCorrect: false },
+                    { text: "To compare past and present technologies", isCorrect: false }
+                ],
+                explanation: "The author uses technological advancement as an example of potential solutions to environmental challenges, balanced with acknowledgment of their limitations."
+            },
+            {
+                id: 10,
+                section: "Speaking",
+                question: "In IELTS Speaking Part 1, how long does the section typically last?",
+                options: [
+                    { text: "2-3 minutes", isCorrect: true },
+                    { text: "5-7 minutes", isCorrect: false },
+                    { text: "8-10 minutes", isCorrect: false },
+                    { text: "10-15 minutes", isCorrect: false }
+                ],
+                explanation: "Part 1 of the IELTS Speaking test is a brief introduction and interview lasting 4-5 minutes. It covers familiar topics to help you relax and warm up."
+            }
+        ];
+
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeTest(ieltsPracticeTest, "IELTS");
+            
+            const menuToggle = document.getElementById('menuToggle');
+            const navLinks = document.querySelector('.nav-links');
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

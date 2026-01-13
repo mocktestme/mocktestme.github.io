@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Duolingo English Test Practice with real questions. Quick and affordable English proficiency assessment for university admission.">
+    <meta name="keywords" content="Duolingo English Test, DET practice test, language proficiency, quick English test, university admission">
+    <meta name="theme-color" content="#F5F1E8">
+    
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="canonical" href="https://mocktestme.github.io/tests/duolingo-practice-test.html">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/test-styles.css">
+    <title>Duolingo English Test - MockTestMe</title>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Duolingo English Test Practice",
+      "description": "Interactive Duolingo English Test practice with real questions",
+      "url": "https://mocktestme.github.io/tests/duolingo-practice-test.html",
+      "applicationCategory": "EducationalApplication",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "1900"
+      }
+    }
+    </script>
+</head>
+<body>
+    <header id="header" class="header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="../index.html" style="text-decoration: none; color: inherit;">
+                    <h1>MOCKTESTME</h1>
+                    <p class="tagline">Master. Test. Succeed.</p>
+                </a>
+            </div>
+            <nav class="nav-main">
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="../index.html#popular-tests">Popular Tests</a></li>
+                    <li><a href="../categories/language-tests.html">Language Tests</a></li>
+                    <li><a href="../pages/about.html">About</a></li>
+                    <li><a href="../pages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="test-header-section">
+            <div class="test-info">
+                <h1>DUOLINGO ENGLISH TEST PRACTICE</h1>
+                <p>DET - Quick English Proficiency Assessment</p>
+                <div class="test-meta">
+                    <span class="meta-item">📊 10 Questions (Sample)</span>
+                    <span class="meta-item">⏱️ 30 Minutes</span>
+                    <span class="meta-item">📈 All Question Types</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="test-container">
+            <aside class="test-sidebar">
+                <h3>QUESTION NAVIGATOR</h3>
+                <div class="question-nav" id="questionNav"></div>
+                <div class="progress-section">
+                    <h4>PROGRESS</h4>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <p id="progressText">0 of 10 Complete</p>
+                </div>
+            </aside>
+
+            <div class="test-main">
+                <div class="test-intro" id="testIntro">
+                    <h2>DUOLINGO ENGLISH TEST PRACTICE</h2>
+                    <div class="intro-content">
+                        <h3>Test Overview</h3>
+                        <p>The Duolingo English Test is a quick, affordable alternative to traditional language proficiency tests:</p>
+                        <ul>
+                            <li><strong>Duration:</strong> 1 hour total, including instructions</li>
+                            <li><strong>Format:</strong> Digital, can be taken from anywhere</li>
+                            <li><strong>Results:</strong> Available within 2 days</li>
+                            <li><strong>Cost:</strong> Significantly less expensive than TOEFL/IELTS</li>
+                        </ul>
+                        <h3>Test Score Range</h3>
+                        <ul>
+                            <li>Overall score: 10-160</li>
+                            <li>Scores in increments of 5 points</li>
+                            <li>Most universities accept scores of 100+</li>
+                        </ul>
+                        <button class="cta-button primary" id="startBtn">START TEST</button>
+                    </div>
+                </div>
+
+                <div class="questions-container" id="questionsContainer" style="display: none;"></div>
+
+                <div class="results-screen" id="resultsScreen" style="display: none;">
+                    <h2>TEST COMPLETED</h2>
+                    <div class="results-content">
+                        <div class="score-box">
+                            <p class="score-label">Estimated Score</p>
+                            <p class="score-value" id="scoreValue">0/160</p>
+                            <p class="score-percentage" id="scorePercentage">0%</p>
+                        </div>
+                        <div class="results-detail">
+                            <h3>DETAILED BREAKDOWN</h3>
+                            <div id="detailedResults"></div>
+                        </div>
+                        <div class="results-actions">
+                            <button class="cta-button primary" id="reviewBtn">REVIEW ANSWERS</button>
+                            <button class="cta-button secondary" id="retakeBtn">RETAKE TEST</button>
+                            <a href="../categories/language-tests.html" class="cta-button secondary">BACK TO TESTS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="test-description">
+            <h2>ABOUT DUOLINGO ENGLISH TEST</h2>
+            <div class="description-content">
+                <p>The Duolingo English Test (DET) is a modern, accessible English proficiency assessment designed for non-native English speakers seeking university admission or professional opportunities. It offers a quick, affordable, and convenient alternative to traditional standardized tests.</p>
+                <h3>Key Features</h3>
+                <p>The DET can be taken from home using a webcam and microphone. Results are typically available within 2 days, making it ideal for students with tight application deadlines. The test covers reading, writing, speaking, and listening skills through adaptive questioning.</p>
+                <h3>Acceptance</h3>
+                <p>Over 2,500 universities and institutions worldwide accept Duolingo English Test scores, including many prestigious universities in the US, UK, Canada, and Australia.</p>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h2>FREQUENTLY ASKED QUESTIONS</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h4>How much does the Duolingo English Test cost?</h4>
+                    <p>The Duolingo English Test costs $49 USD, which is significantly cheaper than TOEFL ($245) or IELTS (£161+). Multiple attempts are allowed at this price.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How long is the Duolingo English Test?</h4>
+                    <p>The test takes approximately 1 hour to complete, including instructions and verification. It's much shorter than TOEFL (3 hours) and IELTS (2 hours 45 minutes).</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Where can I take the Duolingo English Test?</h4>
+                    <p>You can take the DET from anywhere with a computer, webcam, and internet connection. Proctoring is done online via AI and human reviewers.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What is a good Duolingo English Test score?</h4>
+                    <p>A score of 100-110 is generally considered good for university admission. Top universities may require 110-120+. Check specific institution requirements.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How is the Duolingo English Test scored?</h4>
+                    <p>The DET uses AI-powered adaptive testing that adjusts question difficulty based on your performance. Scores range from 10-160 and reflect reading, writing, speaking, and listening abilities.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>ABOUT</h4>
+                <p>MockTestMe is your comprehensive platform for online mock tests and exam preparation.</p>
+            </div>
+            <div class="footer-section">
+                <h4>POPULAR TESTS</h4>
+                <ul class="footer-links">
+                    <li><a href="../tests/sat-practice-test.html">SAT Practice Test</a></li>
+                    <li><a href="../tests/ielts-practice-test.html">IELTS Practice Test</a></li>
+                    <li><a href="../tests/gre-practice-test.html">GRE Practice Test</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>PAGES</h4>
+                <ul class="footer-links">
+                    <li><a href="../pages/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="../pages/terms-of-service.html">Terms of Service</a></li>
+                    <li><a href="../pages/contact.html">Contact Us</a></li>
+                    <li><a href="../pages/blog.html">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MockTestMe. All rights reserved.</p>
+            <p>Domain: mocktestme.github.io</p>
+        </div>
+    </footer>
+
+    <script src="../js/test-engine.js"></script>
+    <script>
+        const duolingoPracticeTest = [
+            {
+                id: 1,
+                section: "Reading",
+                question: "What is the primary topic of this scientific article about bioluminescence?",
+                options: [
+                    { text: "How living organisms produce light", isCorrect: true },
+                    { text: "The history of lightbulb invention", isCorrect: false },
+                    { text: "Artificial light sources used in laboratories", isCorrect: false },
+                    { text: "Solar energy conversion in plants", isCorrect: false }
+                ],
+                explanation: "Bioluminescence is the production of light by living organisms through chemical reactions, which is the main topic of the article."
+            },
+            {
+                id: 2,
+                section: "Writing",
+                question: "Complete the sentence: 'The conference will be _____ next month.'",
+                options: [
+                    { text: "hold", isCorrect: false },
+                    { text: "held", isCorrect: true },
+                    { text: "holding", isCorrect: false },
+                    { text: "to hold", isCorrect: false }
+                ],
+                explanation: "The passive voice 'held' is correct here. The conference (subject) will be held (passive verb) next month."
+            },
+            {
+                id: 3,
+                section: "Reading",
+                question: "According to the passage, what happens when a firefly produces light?",
+                options: [
+                    { text: "It burns chemical fuel like a lightbulb", isCorrect: false },
+                    { text: "A chemical reaction produces light energy without heat", isCorrect: true },
+                    { text: "It absorbs light from the sun and reflects it", isCorrect: false },
+                    { text: "It uses electricity like an LED", isCorrect: false }
+                ],
+                explanation: "Bioluminescence is a cold-light process where luciferin and luciferase react to produce light with minimal heat, unlike combustion."
+            },
+            {
+                id: 4,
+                section: "Writing",
+                question: "Which sentence uses correct grammar?",
+                options: [
+                    { text: "She have studied medicine for three years", isCorrect: false },
+                    { text: "She has studied medicine for three years", isCorrect: true },
+                    { text: "She studied medicine since three years", isCorrect: false },
+                    { text: "She is studying medicine three years ago", isCorrect: false }
+                ],
+                explanation: "The present perfect 'has studied' is correct with 'for' to show duration. 'Have' is used with plural subjects, but 'she' is singular."
+            },
+            {
+                id: 5,
+                section: "Reading",
+                question: "What can be inferred about the purpose of bioluminescence in ocean creatures?",
+                options: [
+                    { text: "Pure entertainment for humans", isCorrect: false },
+                    { text: "Communication, hunting, and defense mechanisms", isCorrect: true },
+                    { text: "Replacing natural sunlight in the ocean", isCorrect: false },
+                    { text: "Generating heat to stay warm", isCorrect: false }
+                ],
+                explanation: "Many deep-sea creatures use bioluminescence for attracting mates, luring prey, and confusing predators in the dark ocean depths."
+            },
+            {
+                id: 6,
+                section: "Writing",
+                question: "Choose the best word to complete: 'The scientist's _____ were published in a prestigious journal.'",
+                options: [
+                    { text: "finding", isCorrect: false },
+                    { text: "findings", isCorrect: true },
+                    { text: "found", isCorrect: false },
+                    { text: "find", isCorrect: false }
+                ],
+                explanation: "The plural noun 'findings' is correct as it refers to multiple results or discoveries from research."
+            },
+            {
+                id: 7,
+                section: "Reading",
+                question: "Why does the author mention that bioluminescence is 'efficient'?",
+                options: [
+                    { text: "It uses less energy than artificial light", isCorrect: true },
+                    { text: "It only works at night", isCorrect: false },
+                    { text: "It is easy to observe in laboratories", isCorrect: false },
+                    { text: "It produces different colors", isCorrect: false }
+                ],
+                explanation: "The passage emphasizes that bioluminescence converts chemical energy to light with minimal energy loss as heat, making it more efficient than incandescent light."
+            },
+            {
+                id: 8,
+                section: "Writing",
+                question: "Select the sentence with correct punctuation:",
+                options: [
+                    { text: "The students were preparing for three exams: math physics and chemistry.", isCorrect: false },
+                    { text: "The students were preparing for three exams: math, physics, and chemistry.", isCorrect: true },
+                    { text: "The students were preparing for three exams, math physics and chemistry.", isCorrect: false },
+                    { text: "The students were preparing for three exams; math physics chemistry.", isCorrect: false }
+                ],
+                explanation: "When listing items after a colon, each item should be separated by commas. This is a series with proper Oxford comma usage."
+            },
+            {
+                id: 9,
+                section: "Reading",
+                question: "What is the relationship between fireflies and their light production?",
+                options: [
+                    { text: "Light production is a waste product of digestion", isCorrect: false },
+                    { text: "Light is produced in a specialized organ and has evolved for specific purposes", isCorrect: true },
+                    { text: "Fireflies accidentally produce light", isCorrect: false },
+                    { text: "All insects can produce bioluminescence", isCorrect: false }
+                ],
+                explanation: "Fireflies have specialized light-producing organs (photophores) that have evolved specifically for communication and mating behaviors."
+            },
+            {
+                id: 10,
+                section: "Writing",
+                question: "Which sentence is grammatically correct?",
+                options: [
+                    { text: "Despite her busy schedule, she manages to exercises daily", isCorrect: false },
+                    { text: "Despite her busy schedule, she manages to exercise daily", isCorrect: true },
+                    { text: "Despite her busy schedule, she manage to exercise daily", isCorrect: false },
+                    { text: "Despite her busy schedule, she manages exercising daily", isCorrect: false }
+                ],
+                explanation: "'Manages to exercise' is the correct infinitive form. 'Exercises' is a verb form that doesn't work with 'manages to.'"
+            }
+        ];
+
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeTest(duolingoPracticeTest, "Duolingo English Test");
+            
+            const menuToggle = document.getElementById('menuToggle');
+            const navLinks = document.querySelector('.nav-links');
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

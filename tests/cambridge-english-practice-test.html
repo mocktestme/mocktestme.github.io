@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cambridge English Assessment Practice Test with real questions. Comprehensive English proficiency exam accepted worldwide for university and professional purposes.">
+    <meta name="keywords" content="Cambridge English, CAE, CPE, English proficiency, language exam, university admission, professional certification">
+    <meta name="theme-color" content="#F5F1E8">
+    
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="canonical" href="https://mocktestme.github.io/tests/cambridge-english-practice-test.html">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/test-styles.css">
+    <title>Cambridge English Assessment - MockTestMe</title>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Cambridge English Assessment Practice",
+      "description": "Interactive Cambridge English Assessment practice test with real questions",
+      "url": "https://mocktestme.github.io/tests/cambridge-english-practice-test.html",
+      "applicationCategory": "EducationalApplication",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "2600"
+      }
+    }
+    </script>
+</head>
+<body>
+    <header id="header" class="header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="../index.html" style="text-decoration: none; color: inherit;">
+                    <h1>MOCKTESTME</h1>
+                    <p class="tagline">Master. Test. Succeed.</p>
+                </a>
+            </div>
+            <nav class="nav-main">
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="../index.html#popular-tests">Popular Tests</a></li>
+                    <li><a href="../categories/language-tests.html">Language Tests</a></li>
+                    <li><a href="../pages/about.html">About</a></li>
+                    <li><a href="../pages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="test-header-section">
+            <div class="test-info">
+                <h1>CAMBRIDGE ENGLISH ASSESSMENT PRACTICE TEST</h1>
+                <p>Cambridge Assessment English - CAE & CPE Level Exam</p>
+                <div class="test-meta">
+                    <span class="meta-item">📊 10 Questions (Sample)</span>
+                    <span class="meta-item">⏱️ 75 Minutes</span>
+                    <span class="meta-item">📈 All Sections</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="test-container">
+            <aside class="test-sidebar">
+                <h3>QUESTION NAVIGATOR</h3>
+                <div class="question-nav" id="questionNav"></div>
+                <div class="progress-section">
+                    <h4>PROGRESS</h4>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <p id="progressText">0 of 10 Complete</p>
+                </div>
+            </aside>
+
+            <div class="test-main">
+                <div class="test-intro" id="testIntro">
+                    <h2>CAMBRIDGE ENGLISH ASSESSMENT PRACTICE TEST</h2>
+                    <div class="intro-content">
+                        <h3>Test Overview</h3>
+                        <p>Cambridge English Assessment covers multiple proficiency levels:</p>
+                        <ul>
+                            <li><strong>CAE (C1):</strong> Advanced level English for university and professional use</li>
+                            <li><strong>CPE (C2):</strong> Mastery level for high-level academic and professional purposes</li>
+                            <li><strong>Assessment:</strong> Reading, Writing, Listening, Speaking, and Use of English</li>
+                        </ul>
+                        <h3>Test Format</h3>
+                        <ul>
+                            <li>Total duration: 3-5 hours depending on level</li>
+                            <li>Scores reported on CEFR scale (A1-C2)</li>
+                            <li>Accepted by thousands of institutions globally</li>
+                        </ul>
+                        <button class="cta-button primary" id="startBtn">START TEST</button>
+                    </div>
+                </div>
+
+                <div class="questions-container" id="questionsContainer" style="display: none;"></div>
+
+                <div class="results-screen" id="resultsScreen" style="display: none;">
+                    <h2>TEST COMPLETED</h2>
+                    <div class="results-content">
+                        <div class="score-box">
+                            <p class="score-label">Cambridge Level</p>
+                            <p class="score-value" id="scoreValue">0/210</p>
+                            <p class="score-percentage" id="scorePercentage">0%</p>
+                        </div>
+                        <div class="results-detail">
+                            <h3>DETAILED BREAKDOWN</h3>
+                            <div id="detailedResults"></div>
+                        </div>
+                        <div class="results-actions">
+                            <button class="cta-button primary" id="reviewBtn">REVIEW ANSWERS</button>
+                            <button class="cta-button secondary" id="retakeBtn">RETAKE TEST</button>
+                            <a href="../categories/language-tests.html" class="cta-button secondary">BACK TO TESTS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="test-description">
+            <h2>ABOUT CAMBRIDGE ENGLISH ASSESSMENT</h2>
+            <div class="description-content">
+                <p>Cambridge English Assessment, part of the University of Cambridge, offers internationally recognized English qualifications. These exams are assessed by expert trained examiners and are highly valued by employers and educational institutions worldwide.</p>
+                <h3>Key Features</h3>
+                <p>Cambridge English qualifications are based on the Common European Framework of Reference for Languages (CEFR) scale. They assess practical English language ability and are available at multiple proficiency levels, from beginner to mastery.</p>
+                <h3>Global Recognition</h3>
+                <p>Cambridge English qualifications are recognized by over 25,000 institutions and employers globally, including major universities, government agencies, and multinational corporations.</p>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h2>FREQUENTLY ASKED QUESTIONS</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h4>What is the difference between CAE and CPE?</h4>
+                    <p>CAE is C1 level (Advanced) and CPE is C2 level (Mastery). CAE is suitable for university and professional purposes, while CPE represents near-native fluency and is for those seeking the highest level certification.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How long is Cambridge English Assessment?</h4>
+                    <p>CAE takes 3 hours and 50 minutes across 4 papers. CPE takes 4 hours across 4 papers. Both include Reading, Writing, Listening, Speaking, and Use of English components.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What is a passing score for Cambridge English?</h4>
+                    <p>Cambridge grades exams from Grade A (90-100) to Grade E (below 50). To 'pass' and receive a qualification certificate, you typically need Grade C or above (160-210 for CAE).</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How long is Cambridge English valid?</h4>
+                    <p>Unlike TOEFL or IELTS, Cambridge English qualifications do not expire. Once you achieve a Cambridge qualification, it is valid for life and is recognized internationally permanently.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Do universities accept Cambridge English?</h4>
+                    <p>Yes, Cambridge English qualifications are accepted by thousands of universities worldwide, including all UK universities and most universities in North America, Europe, Australia, and beyond.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>ABOUT</h4>
+                <p>MockTestMe is your comprehensive platform for online mock tests and exam preparation.</p>
+            </div>
+            <div class="footer-section">
+                <h4>POPULAR TESTS</h4>
+                <ul class="footer-links">
+                    <li><a href="../tests/sat-practice-test.html">SAT Practice Test</a></li>
+                    <li><a href="../tests/ielts-practice-test.html">IELTS Practice Test</a></li>
+                    <li><a href="../tests/gre-practice-test.html">GRE Practice Test</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>PAGES</h4>
+                <ul class="footer-links">
+                    <li><a href="../pages/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="../pages/terms-of-service.html">Terms of Service</a></li>
+                    <li><a href="../pages/contact.html">Contact Us</a></li>
+                    <li><a href="../pages/blog.html">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MockTestMe. All rights reserved.</p>
+            <p>Domain: mocktestme.github.io</p>
+        </div>
+    </footer>
+
+    <script src="../js/test-engine.js"></script>
+    <script>
+        const cambridgePracticeTest = [
+            {
+                id: 1,
+                section: "Reading",
+                question: "What does the passage imply about linguistic diversity?",
+                options: [
+                    { text: "It is decreasing and becoming a concern for linguists", isCorrect: true },
+                    { text: "It is increasing as new languages emerge", isCorrect: false },
+                    { text: "It has no impact on global communication", isCorrect: false },
+                    { text: "It is equally distributed across all regions", isCorrect: false }
+                ],
+                explanation: "The passage discusses how linguistic diversity is declining as languages become extinct, which is a significant concern in the field of linguistics and anthropology."
+            },
+            {
+                id: 2,
+                section: "Use of English",
+                question: "Complete: 'Had they realized the consequences, they _____ their initial decision.'",
+                options: [
+                    { text: "would reconsider", isCorrect: false },
+                    { text: "would have reconsidered", isCorrect: true },
+                    { text: "will reconsider", isCorrect: false },
+                    { text: "would be reconsidering", isCorrect: false }
+                ],
+                explanation: "This is a third conditional structure. 'Had they realized' (past condition) + 'would have reconsidered' (past consequence) is the correct form."
+            },
+            {
+                id: 3,
+                section: "Reading",
+                question: "According to the article, what is the relationship between technology and employment?",
+                options: [
+                    { text: "Technology eliminates all job opportunities", isCorrect: false },
+                    { text: "Technology creates new roles while potentially displacing others", isCorrect: true },
+                    { text: "Technology has no impact on employment", isCorrect: false },
+                    { text: "Employment is unaffected by technological change", isCorrect: false }
+                ],
+                explanation: "The passage explains how technological advancement both creates new job categories in emerging fields while displacing workers in traditional sectors."
+            },
+            {
+                id: 4,
+                section: "Use of English",
+                question: "Which word best completes this sentence? 'The committee's decision was widely _____ across the board.'",
+                options: [
+                    { text: "praised", isCorrect: false },
+                    { text: "criticized", isCorrect: true },
+                    { text: "suggested", isCorrect: false },
+                    { text: "implemented", isCorrect: false }
+                ],
+                explanation: "'Criticized' fits the context and maintains parallelism with negative judgment. The context clues indicate disapproval of the decision."
+            },
+            {
+                id: 5,
+                section: "Reading",
+                question: "What can you infer about the author's perspective on climate policy?",
+                options: [
+                    { text: "Climate policy is unnecessary", isCorrect: false },
+                    { text: "Strong climate policy is essential for environmental protection", isCorrect: true },
+                    { text: "Climate policy should be delayed indefinitely", isCorrect: false },
+                    { text: "The author has no opinion on climate policy", isCorrect: false }
+                ],
+                explanation: "Through detailed argumentation and evidence presentation, the author advocates for comprehensive climate policies and urgent action to address environmental challenges."
+            },
+            {
+                id: 6,
+                section: "Use of English",
+                question: "Select the correct form: 'Despite _____ extensively, they still made critical errors.'",
+                options: [
+                    { text: "practice", isCorrect: false },
+                    { text: "practicing", isCorrect: true },
+                    { text: "to practice", isCorrect: false },
+                    { text: "practiced", isCorrect: false }
+                ],
+                explanation: "After 'Despite,' a gerund (practicing) is required. 'Despite practicing' is the correct structure."
+            },
+            {
+                id: 7,
+                section: "Reading",
+                question: "How does the author organize the argument about cultural heritage?",
+                options: [
+                    { text: "Through chronological historical narrative only", isCorrect: false },
+                    { text: "By combining historical examples with contemporary implications", isCorrect: true },
+                    { text: "Through abstract theoretical concepts", isCorrect: false },
+                    { text: "By presenting contradictory viewpoints without resolution", isCorrect: false }
+                ],
+                explanation: "The author effectively blends historical context with modern relevance to demonstrate how cultural heritage remains significant in contemporary society."
+            },
+            {
+                id: 8,
+                section: "Use of English",
+                question: "Fill in the blank: 'The researcher's hypothesis _____ by subsequent experiments.'",
+                options: [
+                    { text: "was confirmed", isCorrect: true },
+                    { text: "had confirming", isCorrect: false },
+                    { text: "was confirming", isCorrect: false },
+                    { text: "confirmed", isCorrect: false }
+                ],
+                explanation: "'Was confirmed' (passive voice, past tense) correctly indicates that the hypothesis received confirmation from external evidence."
+            },
+            {
+                id: 9,
+                section: "Reading",
+                question: "What is the primary criticism the author raises regarding current environmental practices?",
+                options: [
+                    { text: "Environmental practices are too strict", isCorrect: false },
+                    { text: "Environmental regulations are insufficient and inconsistently enforced", isCorrect: true },
+                    { text: "There is no need for environmental protection", isCorrect: false },
+                    { text: "Environmental practices work perfectly", isCorrect: false }
+                ],
+                explanation: "The author systematically argues that existing environmental regulations lack sufficient enforcement mechanisms and fail to address emerging challenges adequately."
+            },
+            {
+                id: 10,
+                section: "Use of English",
+                question: "Choose the correct form: 'If she _____ about the meeting earlier, she would have attended.'",
+                options: [
+                    { text: "knew", isCorrect: false },
+                    { text: "had known", isCorrect: true },
+                    { text: "would know", isCorrect: false },
+                    { text: "has known", isCorrect: false }
+                ],
+                explanation: "'Had known' is correct in a third conditional. The structure is: If + had + past participle, would have + past participle."
+            }
+        ];
+
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeTest(cambridgePracticeTest, "Cambridge English Assessment");
+            
+            const menuToggle = document.getElementById('menuToggle');
+            const navLinks = document.querySelector('.nav-links');
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
