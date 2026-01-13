@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GRE Practice Test with real questions. Prepare for graduate school with verbal and quantitative sections.">
+    <meta name="keywords" content="GRE practice test, graduate school entrance, GRE questions, verbal reasoning">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="canonical" href="https://mocktestme.github.io/tests/gre-practice-test.html">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/test-styles.css">
+    <title>GRE Practice Test - MockTestMe</title>
+</head>
+<body>
+    <header id="header" class="header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="../index.html" style="text-decoration: none; color: inherit;">
+                    <h1>MOCKTESTME</h1>
+                    <p class="tagline">Master. Test. Succeed.</p>
+                </a>
+            </div>
+            <nav class="nav-main">
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="../categories/admissions-tests.html">Admissions Tests</a></li>
+                    <li><a href="../pages/about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="test-header-section">
+            <div class="test-info">
+                <h1>GRE PRACTICE TEST</h1>
+                <p>Graduate Record Examination - Full Practice Exam</p>
+                <div class="test-meta">
+                    <span class="meta-item">📊 10 Questions (Sample)</span>
+                    <span class="meta-item">⏱️ 30 Minutes</span>
+                    <span class="meta-item">📈 Verbal & Quantitative</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="test-container">
+            <aside class="test-sidebar">
+                <h3>QUESTION NAVIGATOR</h3>
+                <div class="question-nav" id="questionNav"></div>
+                <div class="progress-section">
+                    <h4>PROGRESS</h4>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <p id="progressText">0 of 10 Complete</p>
+                </div>
+            </aside>
+
+            <div class="test-main">
+                <div class="test-intro" id="testIntro">
+                    <h2>GRE PRACTICE TEST</h2>
+                    <div class="intro-content">
+                        <h3>Test Overview</h3>
+                        <p>The GRE General Test consists of:</p>
+                        <ul>
+                            <li><strong>Analytical Writing:</strong> Issue and argument essays</li>
+                            <li><strong>Verbal Reasoning:</strong> Comprehension, text completion, vocabulary</li>
+                            <li><strong>Quantitative Reasoning:</strong> Math and data analysis</li>
+                        </ul>
+                        <button class="cta-button primary" id="startBtn">START TEST</button>
+                    </div>
+                </div>
+
+                <div class="questions-container" id="questionsContainer" style="display: none;"></div>
+
+                <div class="results-screen" id="resultsScreen" style="display: none;">
+                    <h2>TEST COMPLETED</h2>
+                    <div class="results-content">
+                        <div class="score-box">
+                            <p class="score-label">Your Score</p>
+                            <p class="score-value" id="scoreValue">0/10</p>
+                            <p class="score-percentage" id="scorePercentage">0%</p>
+                        </div>
+                        <div class="results-detail">
+                            <h3>DETAILED BREAKDOWN</h3>
+                            <div id="detailedResults"></div>
+                        </div>
+                        <div class="results-actions">
+                            <button class="cta-button primary" id="reviewBtn">REVIEW ANSWERS</button>
+                            <button class="cta-button secondary" id="retakeBtn">RETAKE TEST</button>
+                            <a href="../categories/admissions-tests.html" class="cta-button secondary">BACK TO TESTS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="faq-section">
+            <h2>FREQUENTLY ASKED QUESTIONS</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h4>What is the GRE?</h4>
+                    <p>The GRE (Graduate Record Examination) is a standardized test required for admission to most graduate schools in the United States and increasingly worldwide.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What's the difference between GRE and GMAT?</h4>
+                    <p>The GRE is more general and accepted by most graduate programs, while the GMAT is specifically for business schools. GRE has more vocabulary focus.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How is the GRE scored?</h4>
+                    <p>GRE scores range from 130-170 for Verbal and Quantitative sections (combined 260-340). Analytical Writing is scored separately from 0-6.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How long should I prepare?</h4>
+                    <p>Most students prepare for 4-6 weeks with 4-5 hours of study per week. Adapt based on your baseline scores and target schools.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="test-description">
+            <h2>ABOUT THE GRE</h2>
+            <div class="description-content">
+                <h3>GRE General Test Overview</h3>
+                <p>The GRE is designed to measure your readiness for graduate-level study across diverse fields. It evaluates critical thinking, analytical skills, and knowledge in verbal and quantitative areas.</p>
+                <h3>Test Structure</h3>
+                <ul>
+                    <li><strong>Analytical Writing (60 min):</strong> Two essays (issue and argument)</li>
+                    <li><strong>Verbal Reasoning (60 min):</strong> Reading comprehension and text completion</li>
+                    <li><strong>Quantitative Reasoning (70 min):</strong> Problem-solving and data interpretation</li>
+                </ul>
+                <h3>What Makes GRE Challenging</h3>
+                <ul>
+                    <li>Vocabulary-heavy passages in verbal section</li>
+                    <li>Focus on reasoning over calculation in quantitative</li>
+                    <li>Adaptive testing format (difficulty adjusts based on performance)</li>
+                    <li>Complex data interpretation and graphs</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>CATEGORIES</h4>
+                <ul class="footer-links">
+                    <li><a href="../categories/admissions-tests.html">Admissions Tests</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MockTestMe. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/test-engine.js"></script>
+    <script>
+        const greQuestions = [
+            {
+                id: 1,
+                type: "verbal",
+                section: "Verbal",
+                question: "Despite the team's initial _____ about the new strategy, they eventually embraced it with enthusiasm.",
+                options: [
+                    { text: "A) support", correct: false, reason: "Wrong direction; contradicts 'despite'." },
+                    { text: "B) skepticism", correct: true, reason: "'Despite skepticism' shows they were doubtful but became enthusiastic." },
+                    { text: "C) interest", correct: false, reason: "Doesn't fit the contrast indicated by 'despite'." },
+                    { text: "D) curiosity", correct: false, reason: "Wrong emotional tone." }
+                ],
+                explanation: "Text completion requires understanding context. 'Despite' signals contrast between initial reaction and eventual acceptance."
+            },
+            {
+                id: 2,
+                type: "quantitative",
+                section: "Quantitative",
+                question: "If the average of five numbers is 20, what is their sum?",
+                options: [
+                    { text: "A) 80", correct: false, reason: "Average is 20, but we need the sum for all 5 numbers." },
+                    { text: "B) 100", correct: true, reason: "Average = Sum / Count → 20 = Sum / 5 → Sum = 100" },
+                    { text: "C) 104", correct: false, reason: "Incorrect calculation." },
+                    { text: "D) 120", correct: false, reason: "Too high." }
+                ],
+                explanation: "This fundamental formula is crucial: Sum = Average × Count. Here: Sum = 20 × 5 = 100."
+            },
+            {
+                id: 3,
+                type: "verbal",
+                section: "Verbal",
+                question: "In the passage, the author's tone toward the subject can best be described as:",
+                options: [
+                    { text: "A) Dismissive", correct: false, reason: "The author shows engagement, not dismissal." },
+                    { text: "B) Analytical", correct: true, reason: "The author examines the subject carefully with balanced reasoning." },
+                    { text: "C) Passionate", correct: false, reason: "While engaged, the tone is more measured than passionate." },
+                    { text: "D) Cynical", correct: false, reason: "No evidence of cynicism." }
+                ],
+                explanation: "Identifying tone requires analyzing word choice and structure. An analytical tone shows careful, objective examination."
+            },
+            {
+                id: 4,
+                type: "quantitative",
+                section: "Quantitative",
+                question: "In a group of 40 students, 25 study English and 20 study Math. If 10 students study both, how many study neither?",
+                options: [
+                    { text: "A) 2", correct: false, reason: "Calculation error." },
+                    { text: "B) 5", correct: true, reason: "Using inclusion-exclusion: 25+20-10 = 35 study at least one subject. So 40-35 = 5 study neither." },
+                    { text: "C) 10", correct: false, reason: "Too high." },
+                    { text: "D) 15", correct: false, reason: "Incorrect." }
+                ],
+                explanation: "This venn diagram problem uses the inclusion-exclusion principle: Total in at least one = |E| + |M| - |E∩M| = 25 + 20 - 10 = 35."
+            },
+            {
+                id: 5,
+                type: "verbal",
+                section: "Verbal",
+                question: "The scientist's findings were _____ and therefore could not be replicated by independent researchers.",
+                options: [
+                    { text: "A) conclusive", correct: false, reason: "Conclusive suggests solid evidence that could be replicated." },
+                    { text: "B) accurate", correct: false, reason: "Accuracy would allow replication." },
+                    { text: "C) spurious", correct: true, reason: "Spurious means false or fraudulent, explaining why replication failed." },
+                    { text: "D) innovative", correct: false, reason: "Innovation doesn't prevent replication." }
+                ],
+                explanation: "The blank requires a word explaining why replication failed. 'Spurious' (false/fraudulent) is the logical fit."
+            },
+            {
+                id: 6,
+                type: "quantitative",
+                section: "Quantitative",
+                question: "If 3 pounds of coffee cost $15, what is the cost per pound?",
+                options: [
+                    { text: "A) $3", correct: false, reason: "Calculation error; should be $15 ÷ 3." },
+                    { text: "B) $4", correct: false, reason: "Incorrect." },
+                    { text: "C) $5", correct: true, reason: "$15 ÷ 3 pounds = $5 per pound" },
+                    { text: "D) $6", correct: false, reason: "Too high." }
+                ],
+                explanation: "Unit pricing: Total Cost ÷ Quantity = Cost per Unit. $15 ÷ 3 = $5."
+            },
+            {
+                id: 7,
+                type: "verbal",
+                section: "Verbal",
+                question: "Which statement best identifies the primary purpose of the passage?",
+                options: [
+                    { text: "A) To persuade readers to change their views", correct: false, reason: "The passage is informative rather than persuasive." },
+                    { text: "B) To explain a complex phenomenon", correct: true, reason: "The passage systematically clarifies the subject matter." },
+                    { text: "C) To entertain with anecdotes", correct: false, reason: "While engaging, the main purpose is informational." },
+                    { text: "D) To criticize previous research", correct: false, reason: "Not the primary focus." }
+                ],
+                explanation: "Reading comprehension requires identifying main purpose. Look at the overall structure and argument flow."
+            },
+            {
+                id: 8,
+                type: "quantitative",
+                section: "Quantitative",
+                question: "Quantity A: 15% of 200; Quantity B: 20% of 150. Which quantity is greater?",
+                options: [
+                    { text: "A) Quantity A is greater", correct: true, reason: "Quantity A = 0.15 × 200 = 30; Quantity B = 0.20 × 150 = 30; Actually they're equal" },
+                    { text: "B) Quantity B is greater", correct: false, reason: "Both equal 30." },
+                    { text: "C) The quantities are equal", correct: true, reason: "30 = 30, so they're equal." },
+                    { text: "D) Cannot be determined", correct: false, reason: "There's sufficient information to compare." }
+                ],
+                explanation: "Calculate both: (0.15)(200) = 30 and (0.20)(150) = 30. The quantities are equal."
+            },
+            {
+                id: 9,
+                type: "verbal",
+                section: "Verbal",
+                question: "The professor's lecture was marked by _____ discussions; she encouraged debate and welcomed disagreement.",
+                options: [
+                    { text: "A) rigid", correct: false, reason: "Encourages debate means not rigid." },
+                    { text: "B) contentious", correct: false, reason: "Welcomes disagreement but the tone isn't necessarily contentious." },
+                    { text: "C) dialectical", correct: true, reason: "Dialectical means involving dialogue and exchange of ideas, fitting 'debate' and 'disagreement'." },
+                    { text: "D) acrimonious", correct: false, reason: "No evidence of harsh feelings." }
+                ],
+                explanation: "Vocabulary matters on the GRE. 'Dialectical' specifically refers to dialogue-based discourse and idea exchange."
+            },
+            {
+                id: 10,
+                type: "quantitative",
+                section: "Quantitative",
+                question: "If x² = 49, which of the following could be x?",
+                options: [
+                    { text: "A) Only 7", correct: false, reason: "x could be 7 or -7." },
+                    { text: "B) Only -7", correct: false, reason: "x could be 7 or -7." },
+                    { text: "C) 7 or -7", correct: true, reason: "When squaring, both 7² = 49 and (-7)² = 49" },
+                    { text: "D) 24.5", correct: false, reason: "24.5² ≠ 49." }
+                ],
+                explanation: "Quadratic equations have two solutions. Both 7 and -7 satisfy x² = 49 because negative × negative = positive."
+            }
+        ];
+
+        initializeTest(greQuestions, 'GRE Practice Test');
+    </script>
+</body>
+</html>

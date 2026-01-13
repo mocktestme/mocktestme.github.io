@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ACT Practice Test with real questions. Test your English, Math, Reading, and Science skills.">
+    <meta name="keywords" content="ACT practice test, ACT questions, college entrance exam">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="canonical" href="https://mocktestme.github.io/tests/act-practice-test.html">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/test-styles.css">
+    <title>ACT Practice Test - MockTestMe</title>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "ACT Practice Test",
+      "description": "Interactive ACT practice test",
+      "url": "https://mocktestme.github.io/tests/act-practice-test.html",
+      "applicationCategory": "EducationalApplication"
+    }
+    </script>
+</head>
+<body>
+    <header id="header" class="header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="../index.html" style="text-decoration: none; color: inherit;">
+                    <h1>MOCKTESTME</h1>
+                    <p class="tagline">Master. Test. Succeed.</p>
+                </a>
+            </div>
+            <nav class="nav-main">
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="../categories/admissions-tests.html">Admissions Tests</a></li>
+                    <li><a href="../pages/about.html">About</a></li>
+                    <li><a href="../pages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="test-header-section">
+            <div class="test-info">
+                <h1>ACT PRACTICE TEST</h1>
+                <p>American College Test - Full Practice Exam</p>
+                <div class="test-meta">
+                    <span class="meta-item">📊 12 Questions (Sample)</span>
+                    <span class="meta-item">⏱️ 30 Minutes</span>
+                    <span class="meta-item">📈 All Sections</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="test-container">
+            <aside class="test-sidebar">
+                <h3>QUESTION NAVIGATOR</h3>
+                <div class="question-nav" id="questionNav"></div>
+                <div class="progress-section">
+                    <h4>PROGRESS</h4>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <p id="progressText">0 of 12 Complete</p>
+                </div>
+            </aside>
+
+            <div class="test-main">
+                <div class="test-intro" id="testIntro">
+                    <h2>ACT PRACTICE TEST</h2>
+                    <div class="intro-content">
+                        <h3>Test Overview</h3>
+                        <p>This comprehensive ACT practice test covers:</p>
+                        <ul>
+                            <li><strong>English:</strong> Grammar, punctuation, sentence structure</li>
+                            <li><strong>Math:</strong> Pre-algebra through trigonometry</li>
+                            <li><strong>Reading:</strong> Comprehension and analytical skills</li>
+                            <li><strong>Science:</strong> Data interpretation and reasoning</li>
+                        </ul>
+                        <button class="cta-button primary" id="startBtn">START TEST</button>
+                    </div>
+                </div>
+
+                <div class="questions-container" id="questionsContainer" style="display: none;"></div>
+
+                <div class="results-screen" id="resultsScreen" style="display: none;">
+                    <h2>TEST COMPLETED</h2>
+                    <div class="results-content">
+                        <div class="score-box">
+                            <p class="score-label">Your Score</p>
+                            <p class="score-value" id="scoreValue">0/12</p>
+                            <p class="score-percentage" id="scorePercentage">0%</p>
+                        </div>
+                        <div class="results-detail">
+                            <h3>DETAILED BREAKDOWN</h3>
+                            <div id="detailedResults"></div>
+                        </div>
+                        <div class="results-actions">
+                            <button class="cta-button primary" id="reviewBtn">REVIEW ANSWERS</button>
+                            <button class="cta-button secondary" id="retakeBtn">RETAKE TEST</button>
+                            <a href="../categories/admissions-tests.html" class="cta-button secondary">BACK TO TESTS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="faq-section">
+            <h2>FREQUENTLY ASKED QUESTIONS</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h4>What is the ACT?</h4>
+                    <p>The ACT is a standardized college entrance exam consisting of 4 main sections: English, Math, Reading, and Science. It's widely accepted by universities across the United States.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How is the ACT scored?</h4>
+                    <p>Each section is scored from 1-36, and your composite score is the average of all four sections. Higher scores improve your chances of college admission.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How long is the ACT?</h4>
+                    <p>The full ACT takes approximately 3 hours and 35 minutes including breaks. This practice test is a condensed version covering sample questions from all sections.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Can I use a calculator?</h4>
+                    <p>Yes, calculators are allowed on the Math section of the ACT. However, certain models are prohibited, so check the official ACT guidelines.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="test-description">
+            <h2>ABOUT THE ACT</h2>
+            <div class="description-content">
+                <h3>ACT Overview</h3>
+                <p>The ACT is a standardized test used for college admissions throughout the United States. Unlike the SAT, the ACT includes a Science section and emphasizes content knowledge.</p>
+                <h3>Test Format</h3>
+                <ul>
+                    <li><strong>English (45 min, 75 questions):</strong> Grammar, punctuation, rhetoric</li>
+                    <li><strong>Math (60 min, 60 questions):</strong> Pre-algebra to trigonometry</li>
+                    <li><strong>Reading (35 min, 40 questions):</strong> Literary narrative, social studies, natural science</li>
+                    <li><strong>Science (35 min, 40 questions):</strong> Biology, chemistry, physics, earth science</li>
+                </ul>
+                <h3>Preparation Strategies</h3>
+                <ul>
+                    <li>Take full-length practice tests regularly</li>
+                    <li>Focus on the Science section if it's your weakness</li>
+                    <li>Practice time management within each section</li>
+                    <li>Review all incorrect answers to understand concepts</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>CATEGORIES</h4>
+                <ul class="footer-links">
+                    <li><a href="../categories/admissions-tests.html">Admissions Tests</a></li>
+                    <li><a href="../categories/standardized-tests.html">Standardized Tests</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>PAGES</h4>
+                <ul class="footer-links">
+                    <li><a href="../pages/about.html">About</a></li>
+                    <li><a href="../pages/privacy-policy.html">Privacy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MockTestMe. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/test-engine.js"></script>
+    <script>
+        const actQuestions = [
+            {
+                id: 1,
+                type: "english",
+                section: "English",
+                question: "While studying the ancient ruins, the archaeologist _____ discovered a rare artifact.",
+                options: [
+                    { text: "A) accidental", correct: false, reason: "Needs adverb form 'accidentally' to modify 'discovered'." },
+                    { text: "B) accidentally", correct: true, reason: "Correct adverb form modifying the verb 'discovered'." },
+                    { text: "C) accident", correct: false, reason: "Wrong word form; this is a noun." },
+                    { text: "D) accident's", correct: false, reason: "Incorrect possessive form." }
+                ],
+                explanation: "This tests understanding of parts of speech. When modifying a verb, use the adverb form. 'Accidentally' correctly describes how the artifact was discovered."
+            },
+            {
+                id: 2,
+                type: "math",
+                section: "Math",
+                question: "If a rectangle has a length of 8 cm and a width of 5 cm, what is its area?",
+                options: [
+                    { text: "A) 13 cm²", correct: false, reason: "This is the perimeter calculation (2(8+5) = 26), not area." },
+                    { text: "B) 26 cm²", correct: false, reason: "This is the perimeter, not area." },
+                    { text: "C) 40 cm²", correct: true, reason: "Area = length × width = 8 × 5 = 40 cm²" },
+                    { text: "D) 80 cm²", correct: false, reason: "Double calculation error." }
+                ],
+                explanation: "Area of a rectangle is length multiplied by width. A = 8 cm × 5 cm = 40 cm². Remember that area is measured in square units."
+            },
+            {
+                id: 3,
+                type: "science",
+                section: "Science",
+                question: "Which of the following is the primary source of energy for most organisms on Earth?",
+                options: [
+                    { text: "A) Geothermal energy", correct: false, reason: "Some organisms use this, but it's not primary." },
+                    { text: "B) Solar energy (from the Sun)", correct: true, reason: "The Sun is the primary energy source for most Earth ecosystems through photosynthesis." },
+                    { text: "C) Nuclear energy", correct: false, reason: "Nuclear energy is not the primary natural source for organisms." },
+                    { text: "D) Chemical energy from Earth's core", correct: false, reason: "This is limited to certain deep-sea organisms." }
+                ],
+                explanation: "Solar energy drives photosynthesis in plants, which form the base of most food chains. This makes the Sun the ultimate energy source for nearly all life on Earth."
+            },
+            {
+                id: 4,
+                type: "reading",
+                section: "Reading",
+                question: "Based on the passage, the author views technology as:",
+                options: [
+                    { text: "A) Inherently harmful", correct: false, reason: "The author shows a balanced view, not purely negative." },
+                    { text: "B) A necessary tool requiring careful management", correct: true, reason: "The passage suggests technology has both benefits and risks that must be managed." },
+                    { text: "C) Completely beneficial", correct: false, reason: "The author raises concerns about technology." },
+                    { text: "D) Irrelevant to modern society", correct: false, reason: "The author clearly sees it as significant." }
+                ],
+                explanation: "Reading comprehension requires understanding the author's nuanced perspective. Here, the author balances optimism about technology with caution about its risks."
+            },
+            {
+                id: 5,
+                type: "math",
+                section: "Math",
+                question: "What is 25% of 120?",
+                options: [
+                    { text: "A) 25", correct: false, reason: "Calculation error." },
+                    { text: "B) 30", correct: true, reason: "25% × 120 = 0.25 × 120 = 30" },
+                    { text: "C) 40", correct: false, reason: "This would be 33.3% of 120." },
+                    { text: "D) 90", correct: false, reason: "This would be 75% of 120." }
+                ],
+                explanation: "To find a percentage: (percentage/100) × whole number. 25% of 120 = 0.25 × 120 = 30."
+            },
+            {
+                id: 6,
+                type: "english",
+                section: "English",
+                question: "The committee members _____ unable to agree on the proposal.",
+                options: [
+                    { text: "A) was", correct: false, reason: "Incorrect; 'committee members' is plural." },
+                    { text: "B) were", correct: true, reason: "Correct; 'members' is plural, so use 'were'." },
+                    { text: "C) is", correct: false, reason: "Wrong verb form." },
+                    { text: "D) are being", correct: false, reason: "Unnecessary continuous form." }
+                ],
+                explanation: "Subject-verb agreement is crucial. 'Members' is plural, so it requires the plural verb 'were' not singular 'was'."
+            },
+            {
+                id: 7,
+                type: "science",
+                section: "Science",
+                question: "In the water cycle, evaporation occurs when water changes from _____ to _____.",
+                options: [
+                    { text: "A) solid to liquid", correct: false, reason: "This is melting, not evaporation." },
+                    { text: "B) liquid to gas", correct: true, reason: "Evaporation is the process of liquid water changing to water vapor (gas)." },
+                    { text: "C) gas to liquid", correct: false, reason: "This is condensation." },
+                    { text: "D) gas to solid", correct: false, reason: "This is deposition." }
+                ],
+                explanation: "Evaporation is specifically the phase change from liquid to gas. It's driven by heat energy and is a key part of the water cycle."
+            },
+            {
+                id: 8,
+                type: "reading",
+                section: "Reading",
+                question: "The phrase 'burning bridges' most likely means:",
+                options: [
+                    { text: "A) Actually setting fire to bridges", correct: false, reason: "This is a literal interpretation of a figurative phrase." },
+                    { text: "B) Destroying relationships or opportunities", correct: true, reason: "This idiom means creating conflict or ending relationships permanently." },
+                    { text: "C) Being energetic and enthusiastic", correct: false, reason: "While passionate, this doesn't match the idiom." },
+                    { text: "D) Taking a difficult journey", correct: false, reason: "Not the correct meaning." }
+                ],
+                explanation: "Understanding idiomatic expressions is important for reading comprehension. 'Burning bridges' refers to permanently damaging relationships through one's actions."
+            },
+            {
+                id: 9,
+                type: "math",
+                section: "Math",
+                question: "If 2x - 5 = 11, what is the value of x?",
+                options: [
+                    { text: "A) 3", correct: false, reason: "2(3) - 5 = 1, not 11." },
+                    { text: "B) 6", correct: false, reason: "2(6) - 5 = 7, not 11." },
+                    { text: "C) 8", correct: true, reason: "2(8) - 5 = 16 - 5 = 11 ✓" },
+                    { text: "D) 10", correct: false, reason: "2(10) - 5 = 15, not 11." }
+                ],
+                explanation: "Solve by: 2x - 5 = 11 → 2x = 16 → x = 8. Always verify by substituting back."
+            },
+            {
+                id: 10,
+                type: "science",
+                section: "Science",
+                question: "Which of the following organisms is a producer in a food chain?",
+                options: [
+                    { text: "A) Rabbit", correct: false, reason: "Rabbits are herbivores (primary consumers)." },
+                    { text: "B) Wolf", correct: false, reason: "Wolves are carnivores (secondary consumers)." },
+                    { text: "C) Grass", correct: true, reason: "Plants are producers; they make their own food through photosynthesis." },
+                    { text: "D) Insect", correct: false, reason: "Most insects are consumers." }
+                ],
+                explanation: "Producers are organisms that make their own food (autotrophs). Plants are the most common producers, creating energy from sunlight through photosynthesis."
+            },
+            {
+                id: 11,
+                type: "english",
+                section: "English",
+                question: "Between you and _____, I think that movie was quite boring.",
+                options: [
+                    { text: "A) me", correct: true, reason: "Correct; use objective case 'me' after the preposition 'between'." },
+                    { text: "B) I", correct: false, reason: "'I' is subjective case; incorrect after prepositions." },
+                    { text: "C) myself", correct: false, reason: "Reflexive pronouns shouldn't follow prepositions." },
+                    { text: "D) mine", correct: false, reason: "Possessive pronoun; incorrect here." }
+                ],
+                explanation: "Prepositions like 'between' require objective case pronouns. 'Me' is correct, not 'I'. A helpful tip: remove the first person and see what sounds right. 'Between you and me' is standard English."
+            },
+            {
+                id: 12,
+                type: "math",
+                section: "Math",
+                question: "A store is having a sale where all items are 30% off. If a shirt originally costs $60, what is the sale price?",
+                options: [
+                    { text: "A) $30", correct: false, reason: "This would be 50% off." },
+                    { text: "B) $38", correct: false, reason: "Calculation error." },
+                    { text: "C) $42", correct: true, reason: "30% of $60 = $18. Sale price = $60 - $18 = $42" },
+                    { text: "D) $45", correct: false, reason: "This would be 25% off." }
+                ],
+                explanation: "Calculate discount: 30% of $60 = 0.30 × $60 = $18. Then subtract: $60 - $18 = $42. Alternatively, you pay 70%: 0.70 × $60 = $42."
+            }
+        ];
+
+        initializeTest(actQuestions, 'ACT Practice Test');
+    </script>
+</body>
+</html>

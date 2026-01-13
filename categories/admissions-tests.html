@@ -3,52 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="College & Graduate Admissions Tests - SAT, ACT, GRE, GMAT, LSAT. Practice with real questions, detailed answers, and comprehensive explanations.">
-    <meta name="keywords" content="admissions tests, SAT, ACT, GRE, GMAT, LSAT, college prep, graduate school, mock tests, practice exams">
-    <meta name="author" content="MockTestMe">
+    <meta name="description" content="Admissions Tests - SAT, ACT, GMAT, GRE, LSAT. Practice with real mock test questions and comprehensive exam preparation.">
+    <meta name="keywords" content="admissions tests, SAT, ACT, GMAT, GRE, LSAT, mock tests, practice exams, college entrance">
     <meta name="theme-color" content="#F5F1E8">
+    <meta property="og:title" content="Admissions Tests - MockTestMe">
+    <meta property="og:description" content="Master admissions tests with real questions and detailed explanations.">
+    <meta property="og:type" content="website">
     
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
     <link rel="canonical" href="https://mocktestme.github.io/categories/admissions-tests.html">
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/admissions-tests.css">
-    <title>College & Graduate Admissions Tests - MockTestMe | SAT, ACT, GRE, GMAT, LSAT</title>
+    <title>Admissions Tests - MockTestMe | SAT, ACT, GMAT, GRE, LSAT</title>
     
-    <!-- WebApplication Schema Markup -->
     <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
-        "@type": "WebApplication",
-        "name": "MockTestMe - Admissions Tests",
-        "url": "https://mocktestme.github.io/categories/admissions-tests.html",
-        "description": "Comprehensive platform for college and graduate admissions test preparation",
-        "applicationCategory": "EducationalApplication",
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-        },
-        "creator": {
-            "@type": "Organization",
-            "name": "MockTestMe",
-            "url": "https://mocktestme.github.io"
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "ratingCount": "2500"
-        }
-    }
-    </script>
-    
-    <!-- Organization Schema Markup -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "MockTestMe",
-        "url": "https://mocktestme.github.io",
-        "description": "Online platform for mock tests and exam preparation"
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "MockTestMe - Admissions Tests",
+      "description": "Practice admissions tests with real questions",
+      "url": "https://mocktestme.github.io/categories/admissions-tests.html",
+      "applicationCategory": "EducationalApplication",
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "USD",
+        "price": "0",
+        "availability": "https://schema.org/InStock"
+      }
     }
     </script>
 </head>
@@ -79,89 +59,125 @@
     </header>
 
     <main>
-        <!-- Page Hero -->
+        <!-- Page Header -->
         <section class="page-hero">
             <h1>ADMISSIONS TESTS</h1>
-            <p>Master college and graduate school entrance exams with real practice questions</p>
+            <p>Master college and graduate school entrance exams with real questions</p>
         </section>
 
-        <!-- Description Section -->
-        <section class="admissions-description">
-            <div class="description-container">
-                <h2>About Admissions Tests</h2>
-                <p>Admissions tests are standardized exams required for college and graduate school applications. Our comprehensive practice platform includes real questions with detailed explanations to help you achieve your target scores. Each test is carefully designed to mimic the actual exam format and difficulty level.</p>
-                <div class="description-highlights">
-                    <div class="highlight-item">
-                        <h3>REAL QUESTIONS</h3>
-                        <p>Practice with authentic exam questions and formats</p>
+        <!-- Popular Tests Section -->
+        <section class="popular-section">
+            <h2>FEATURED ADMISSIONS TESTS</h2>
+            <div class="popular-grid">
+                <div class="test-card featured">
+                    <div class="test-header">
+                        <h3>SAT</h3>
+                        <span class="test-level">University</span>
                     </div>
-                    <div class="highlight-item">
-                        <h3>DETAILED ANSWERS</h3>
-                        <p>Comprehensive explanations for every question</p>
+                    <p>Scholastic Assessment Test for college admissions</p>
+                    <div class="test-stats">
+                        <span>180 Questions</span>
+                        <span>3 Hours</span>
                     </div>
-                    <div class="highlight-item">
-                        <h3>PROGRESS TRACKING</h3>
-                        <p>Monitor your improvement over time</p>
+                    <a href="../tests/sat-practice-test.html" class="test-link">START TEST →</a>
+                </div>
+                <div class="test-card featured">
+                    <div class="test-header">
+                        <h3>ACT</h3>
+                        <span class="test-level">University</span>
                     </div>
+                    <p>American College Assessment Test for college entrance</p>
+                    <div class="test-stats">
+                        <span>215 Questions</span>
+                        <span>3.5 Hours</span>
+                    </div>
+                    <a href="../tests/act-practice-test.html" class="test-link">START TEST →</a>
+                </div>
+                <div class="test-card featured">
+                    <div class="test-header">
+                        <h3>GMAT</h3>
+                        <span class="test-level">Graduate</span>
+                    </div>
+                    <p>Graduate Management Admission Test for business school</p>
+                    <div class="test-stats">
+                        <span>80 Questions</span>
+                        <span>3.5 Hours</span>
+                    </div>
+                    <a href="../tests/gmat-practice-test.html" class="test-link">START TEST →</a>
                 </div>
             </div>
         </section>
 
-        <!-- Popular Tests Section -->
-        <section class="popular-tests-section">
-            <h2>POPULAR ADMISSIONS TESTS</h2>
-            <div class="popular-tests-grid" id="popularTests">
-                <!-- Populated by JavaScript -->
+        <!-- Browse by Category -->
+        <section class="browse-section">
+            <h2>ALL ADMISSIONS TESTS</h2>
+            <div class="category-grid">
+                <div class="category-item">
+                    <h4>SAT</h4>
+                    <p>College entrance exam covering reading, writing, and math</p>
+                    <a href="../tests/sat-practice-test.html" class="cat-link">EXPLORE →</a>
+                </div>
+                <div class="category-item">
+                    <h4>ACT</h4>
+                    <p>Comprehensive college test with science and English sections</p>
+                    <a href="../tests/act-practice-test.html" class="cat-link">EXPLORE →</a>
+                </div>
+                <div class="category-item">
+                    <h4>GMAT</h4>
+                    <p>Graduate business school entrance exam</p>
+                    <a href="../tests/gmat-practice-test.html" class="cat-link">EXPLORE →</a>
+                </div>
+                <div class="category-item">
+                    <h4>GRE</h4>
+                    <p>Graduate Record Examination for graduate programs</p>
+                    <a href="../tests/gre-practice-test.html" class="cat-link">EXPLORE →</a>
+                </div>
+                <div class="category-item">
+                    <h4>LSAT</h4>
+                    <p>Law School Admission Test for legal education</p>
+                    <a href="../tests/lsat-practice-test.html" class="cat-link">EXPLORE →</a>
+                </div>
+                <div class="category-item">
+                    <h4>DAT</h4>
+                    <p>Dental Admission Test for dental school programs</p>
+                    <a href="../tests/dat-practice-test.html" class="cat-link">EXPLORE →</a>
+                </div>
             </div>
         </section>
 
-        <!-- Browse by Category Section -->
-        <section class="browse-category-section">
-            <h2>BROWSE BY CATEGORY</h2>
-            <div class="category-filters" id="categoryFilters">
-                <button class="filter-btn active" data-category="all">ALL TESTS</button>
-                <button class="filter-btn" data-category="undergraduate">UNDERGRADUATE</button>
-                <button class="filter-btn" data-category="graduate">GRADUATE</button>
-                <button class="filter-btn" data-category="law">LAW SCHOOL</button>
-            </div>
-        </section>
-
-        <!-- Tests Display Section -->
-        <section class="tests-container">
-            <div class="tests-wrapper" id="testsWrapper">
-                <!-- Test items populated by JavaScript -->
-            </div>
-        </section>
-
-        <!-- Sidebar (visible on desktop, collapsible on mobile) -->
-        <aside class="sidebar-section">
+        <!-- Sidebar Section -->
+        <section class="sidebar-section">
             <div class="sidebar-content">
-                <h3>QUICK NAVIGATION</h3>
-                <ul class="sidebar-links">
-                    <li><a href="#sat-section">SAT Test</a></li>
-                    <li><a href="#act-section">ACT Test</a></li>
-                    <li><a href="#gre-section">GRE Test</a></li>
-                    <li><a href="#gmat-section">GMAT Test</a></li>
-                    <li><a href="#lsat-section">LSAT Test</a></li>
-                    <li><a href="#faqs-section">FAQs</a></li>
-                </ul>
-            </div>
-        </aside>
-
-        <!-- FAQs Section -->
-        <section class="faqs-section" id="faqs-section">
-            <h2>FREQUENTLY ASKED QUESTIONS</h2>
-            <div class="faqs-container">
-                <!-- FAQs populated by JavaScript -->
+                <aside class="sidebar">
+                    <h3>FILTER TESTS</h3>
+                    <div class="filter-group">
+                        <h4>Test Level</h4>
+                        <label><input type="checkbox" checked> University (3)</label>
+                        <label><input type="checkbox"> Graduate (2)</label>
+                        <label><input type="checkbox"> Professional (1)</label>
+                    </div>
+                    <div class="filter-group">
+                        <h4>Duration</h4>
+                        <label><input type="checkbox"> Under 2 Hours</label>
+                        <label><input type="checkbox" checked> 2-4 Hours</label>
+                        <label><input type="checkbox"> Over 4 Hours</label>
+                    </div>
+                    <div class="filter-group">
+                        <h4>Question Count</h4>
+                        <label><input type="checkbox"> 50-100</label>
+                        <label><input type="checkbox" checked> 100-200</label>
+                        <label><input type="checkbox"> 200+</label>
+                    </div>
+                </aside>
             </div>
         </section>
 
         <!-- CTA Section -->
         <section class="cta-section">
             <div class="cta-box">
-                <h2>READY TO START PRACTICING?</h2>
-                <p>Choose a test and begin your journey to success</p>
-                <button class="cta-button primary" onclick="scrollToTests()">START PRACTICE TEST</button>
+                <h2>READY TO SUCCEED?</h2>
+                <p>Start your admissions test preparation today with real questions and detailed solutions</p>
+                <button class="cta-button primary">START PRACTICE TEST</button>
             </div>
         </section>
     </main>
@@ -176,29 +192,37 @@
             <div class="footer-section">
                 <h4>CATEGORIES</h4>
                 <ul class="footer-links">
+                    <li><a href="./admissions-tests.html">Admissions Tests</a></li>
                     <li><a href="./standardized-tests.html">Standardized Tests</a></li>
                     <li><a href="./language-tests.html">Language Tests</a></li>
                     <li><a href="./medical-health.html">Medical & Health</a></li>
                     <li><a href="./professional-certs.html">Professional Certs</a></li>
-                    <li><a href="./admissions-tests.html">Admissions Tests</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>POPULAR TESTS</h4>
+                <ul class="footer-links">
+                    <li><a href="../tests/sat-practice-test.html">SAT Practice Test</a></li>
+                    <li><a href="../tests/act-practice-test.html">ACT Practice Test</a></li>
+                    <li><a href="../tests/gmat-practice-test.html">GMAT Practice Test</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h4>PAGES</h4>
                 <ul class="footer-links">
+                    <li><a href="../pages/about.html">About</a></li>
                     <li><a href="../pages/privacy-policy.html">Privacy Policy</a></li>
                     <li><a href="../pages/terms-of-service.html">Terms of Service</a></li>
-                    <li><a href="../pages/contact.html">Contact Us</a></li>
+                    <li><a href="../pages/contact.html">Contact</a></li>
                     <li><a href="../pages/blog.html">Blog</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 MockTestMe. All rights reserved.</p>
-            <p>Domain: mocktestme.github.io</p>
         </div>
     </footer>
 
-    <script src="../js/admissions-tests.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>

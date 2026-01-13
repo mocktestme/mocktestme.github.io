@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LSAT Practice Test with real logical reasoning questions. Prepare for law school with comprehensive exam practice.">
+    <meta name="keywords" content="LSAT practice test, law school entrance, logical reasoning, LSAT questions">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="canonical" href="https://mocktestme.github.io/tests/lsat-practice-test.html">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/test-styles.css">
+    <title>LSAT Practice Test - MockTestMe</title>
+</head>
+<body>
+    <header id="header" class="header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="../index.html" style="text-decoration: none; color: inherit;">
+                    <h1>MOCKTESTME</h1>
+                    <p class="tagline">Master. Test. Succeed.</p>
+                </a>
+            </div>
+            <nav class="nav-main">
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="../categories/admissions-tests.html">Admissions Tests</a></li>
+                    <li><a href="../pages/about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="test-header-section">
+            <div class="test-info">
+                <h1>LSAT PRACTICE TEST</h1>
+                <p>Law School Admission Test - Practice Exam</p>
+                <div class="test-meta">
+                    <span class="meta-item">📊 8 Questions (Sample)</span>
+                    <span class="meta-item">⏱️ 30 Minutes</span>
+                    <span class="meta-item">📈 Logical Reasoning</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="test-container">
+            <aside class="test-sidebar">
+                <h3>QUESTION NAVIGATOR</h3>
+                <div class="question-nav" id="questionNav"></div>
+                <div class="progress-section">
+                    <h4>PROGRESS</h4>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <p id="progressText">0 of 8 Complete</p>
+                </div>
+            </aside>
+
+            <div class="test-main">
+                <div class="test-intro" id="testIntro">
+                    <h2>LSAT PRACTICE TEST</h2>
+                    <div class="intro-content">
+                        <h3>Test Overview</h3>
+                        <p>The LSAT assesses essential skills for success in law school:</p>
+                        <ul>
+                            <li><strong>Logical Reasoning:</strong> Critical thinking and argumentation (2 sections)</li>
+                            <li><strong>Reading Comprehension:</strong> Understanding complex legal texts</li>
+                            <li><strong>Analytical Reasoning:</strong> Logic games and patterns</li>
+                        </ul>
+                        <button class="cta-button primary" id="startBtn">START TEST</button>
+                    </div>
+                </div>
+
+                <div class="questions-container" id="questionsContainer" style="display: none;"></div>
+
+                <div class="results-screen" id="resultsScreen" style="display: none;">
+                    <h2>TEST COMPLETED</h2>
+                    <div class="results-content">
+                        <div class="score-box">
+                            <p class="score-label">Your Score</p>
+                            <p class="score-value" id="scoreValue">0/8</p>
+                            <p class="score-percentage" id="scorePercentage">0%</p>
+                        </div>
+                        <div class="results-detail">
+                            <h3>DETAILED BREAKDOWN</h3>
+                            <div id="detailedResults"></div>
+                        </div>
+                        <div class="results-actions">
+                            <button class="cta-button primary" id="reviewBtn">REVIEW ANSWERS</button>
+                            <button class="cta-button secondary" id="retakeBtn">RETAKE TEST</button>
+                            <a href="../categories/admissions-tests.html" class="cta-button secondary">BACK TO TESTS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="faq-section">
+            <h2>FREQUENTLY ASKED QUESTIONS</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h4>Is the LSAT required for law school?</h4>
+                    <p>Yes, virtually all ABA-accredited law schools require the LSAT for admission. It's a critical component of your application.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What LSAT score do I need?</h4>
+                    <p>LSAT scores range from 120-180. Most competitive law schools require scores of 160+. Your goal depends on your target schools.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How difficult is the logic games section?</h4>
+                    <p>The Analytical Reasoning (logic games) section is notoriously challenging. Most students benefit from 2-3 months of focused practice on this section.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Can I retake the LSAT?</h4>
+                    <p>Yes, you can retake the LSAT multiple times, though law schools see all your scores. A single retake is common for score improvement.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="test-description">
+            <h2>ABOUT THE LSAT</h2>
+            <div class="description-content">
+                <h3>LSAT Overview</h3>
+                <p>The Law School Admission Test measures reading and analytical skills essential for legal study. It's a half-day test administered worldwide multiple times per year.</p>
+                <h3>Section Breakdown</h3>
+                <ul>
+                    <li><strong>Logical Reasoning (2 sections, ~35 min each):</strong> 24-26 questions per section testing argument analysis</li>
+                    <li><strong>Reading Comprehension (~35 min):</strong> 26-28 questions on complex legal and academic passages</li>
+                    <li><strong>Analytical Reasoning (~35 min):</strong> 22-24 questions featuring logic games</li>
+                </ul>
+                <h3>Key Strategies</h3>
+                <ul>
+                    <li>Master logic games early in your prep timeline</li>
+                    <li>Develop efficient reading strategies for dense passages</li>
+                    <li>Learn argument structures and common fallacies</li>
+                    <li>Take full-length timed practice tests weekly</li>
+                    <li>Aim for 3-4 months of dedicated preparation</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>CATEGORIES</h4>
+                <ul class="footer-links">
+                    <li><a href="../categories/admissions-tests.html">Admissions Tests</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MockTestMe. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/test-engine.js"></script>
+    <script>
+        const lsatQuestions = [
+            {
+                id: 1,
+                type: "logical-reasoning",
+                section: "Logical Reasoning",
+                question: "A lawyer argues: 'Every case she has won was a case she prepared thoroughly for. So, if you prepare thoroughly, you will win your case.' Which of the following identifies the flaw in this reasoning?",
+                options: [
+                    { text: "A) Confuses necessary and sufficient conditions", correct: true, reason: "Thorough preparation is necessary (from past cases) but not sufficient for winning." },
+                    { text: "B) Uses circular reasoning", correct: false, reason: "This is about conditional logic, not circular reasoning." },
+                    { text: "C) Attacks the person rather than the argument", correct: false, reason: "No personal attack is made." },
+                    { text: "D) Makes an overgeneralization", correct: false, reason: "While there is one, the main error is about conditions." }
+                ],
+                explanation: "This tests understanding of necessary vs. sufficient conditions. Past success with preparation doesn't guarantee future success."
+            },
+            {
+                id: 2,
+                type: "logical-reasoning",
+                section: "Logical Reasoning",
+                question: "Legal precedent requires that any law restricting fundamental rights must serve a compelling government interest. The government argues this law is necessary for national security. Therefore, the law is constitutional. Which assumption does this argument depend on?",
+                options: [
+                    { text: "A) National security is always a compelling interest", correct: false, reason: "This is too absolute; the real assumption is narrower." },
+                    { text: "B) National security is a compelling government interest", correct: true, reason: "This is the missing link connecting the government's claim to the legal conclusion." },
+                    { text: "C) All laws are constitutional", correct: false, reason: "Obviously false." },
+                    { text: "D) The government is acting in good faith", correct: false, reason: "Not the logical assumption needed." }
+                ],
+                explanation: "Identifying assumptions is crucial on the LSAT. The argument assumes that national security qualifies as 'compelling' under constitutional law."
+            },
+            {
+                id: 3,
+                type: "logical-reasoning",
+                section: "Logical Reasoning",
+                question: "Two judges agree: (Judge A) 'This precedent should be overturned because it's outdated.' (Judge B) 'No, stare decisis means we should follow established precedent unless it's clearly erroneous.' Which statement best describes their disagreement?",
+                options: [
+                    { text: "A) They disagree about the facts of the case", correct: false, reason: "Their disagreement is about legal principle, not facts." },
+                    { text: "B) They disagree about what legal principle should apply", correct: true, reason: "One prioritizes precedent change; the other prioritizes stare decisis." },
+                    { text: "C) One judge is right and one is wrong", correct: false, reason: "This is a longstanding jurisprudential debate." },
+                    { text: "D) They have no common ground", correct: false, reason: "Both agree precedent exists; they disagree on its application." }
+                ],
+                explanation: "Understanding jurisprudential disagreements helps with reading comprehension. This reflects the real tension between precedent stability and legal evolution."
+            },
+            {
+                id: 4,
+                type: "logical-reasoning",
+                section: "Logical Reasoning",
+                question: "The statute states: 'No person under 18 may purchase tobacco.' A 16-year-old asks their parent to purchase cigarettes for them. The parent complies. Is the parent breaking the law? Assume applicable law defines the offense as the person purchasing, not the person providing.",
+                options: [
+                    { text: "A) Yes, the parent is directly violating the statute", correct: false, reason: "The statute specifically targets the purchaser (the minor)." },
+                    { text: "B) No, the statute doesn't apply to the parent", correct: true, reason: "The statute makes illegal only the purchase by a person under 18, not providing to them." },
+                    { text: "C) It depends on state law", correct: false, reason: "We're applying the given statute as stated." },
+                    { text: "D) The parent is an accessory to the minor's violation", correct: false, reason: "Accessory liability requires different legal language." }
+                ],
+                explanation: "Precise statutory reading is essential. The law targets who purchases, not who provides, so the parent isn't breaking this specific law."
+            },
+            {
+                id: 5,
+                type: "logical-reasoning",
+                section: "Logical Reasoning",
+                question: "Study shows: 'Companies that require drug testing have higher rates of employee theft than companies that don't.' Conclusion: 'Drug testing programs are ineffective and may actually increase theft.' What must be true for this conclusion to follow logically?",
+                options: [
+                    { text: "A) Drug testing causes employee theft", correct: false, reason: "Correlation doesn't prove causation; we'd need this assumption." },
+                    { text: "B) The study controlled for all other variables affecting theft rates", correct: true, reason: "Without this, higher theft could be due to other factors, not the testing itself." },
+                    { text: "C) Drug testing is expensive", correct: false, reason: "Cost isn't relevant to this logical issue." },
+                    { text: "D) Employees know about the testing program", correct: false, reason: "Irrelevant to whether testing causes theft." }
+                ],
+                explanation: "This tests understanding of causal reasoning and confounding variables. A properly controlled study is necessary for the conclusion to logically follow."
+            },
+            {
+                id: 6,
+                type: "logical-reasoning",
+                section: "Logical Reasoning",
+                question: "A contract states: 'If Party A breaches, Party B may terminate.' Party A breached. Therefore, Party B is entitled to terminate. Which logical form does this argument follow?",
+                options: [
+                    { text: "A) Modus Tollens", correct: false, reason: "That would involve denying the consequent." },
+                    { text: "B) Modus Ponens", correct: true, reason: "If P then Q. P is true. Therefore Q. Here: If breach, then may terminate. Breach occurred. So may terminate." },
+                    { text: "C) Disjunctive Syllogism", correct: false, reason: "That requires an 'or' premise." },
+                    { text: "D) Begging the Question", correct: false, reason: "The argument doesn't assume its conclusion." }
+                ],
+                explanation: "Understanding logical forms helps identify valid arguments. Modus Ponens (affirming the antecedent) is one of the most basic valid argument forms."
+            },
+            {
+                id: 7,
+                type: "logical-reasoning",
+                section: "Logical Reasoning",
+                question: "Legislators argue: 'This regulation will improve workplace safety because studies show OSHA regulations have improved safety in the past.' What weakens this argument most?",
+                options: [
+                    { text: "A) Not all OSHA regulations have improved safety equally", correct: false, reason: "While true, doesn't weaken the specific argument." },
+                    { text: "B) The new regulation is substantially different from past regulations", correct: true, reason: "Past success of different regulations doesn't guarantee this new one will work." },
+                    { text: "C) Some workplace injuries are unavoidable", correct: false, reason: "Doesn't address the argument's logic." },
+                    { text: "D) Compliance with regulations is expensive", correct: false, reason: "Cost isn't what's being debated." }
+                ],
+                explanation: "Weakening arguments by showing disanalogies between past and present cases is a common LSAT strategy."
+            },
+            {
+                id: 8,
+                type: "logical-reasoning",
+                section: "Logical Reasoning",
+                question: "A judge states: 'The law provides X remedy for Y violation. The defendant committed Y violation. Therefore, X remedy must be applied.' Which assumption would most strengthen this reasoning?",
+                options: [
+                    { text: "A) The defendant intended to violate the law", correct: false, reason: "Intent isn't relevant to statutory remedies." },
+                    { text: "B) No exceptions to the application of X remedy exist", correct: true, reason: "This strengthens the conclusion that X 'must' be applied (no discretion)." },
+                    { text: "C) Similar defendants have received X remedy", correct: false, reason: "This is weak support compared to B." },
+                    { text: "D) The victim requested X remedy", correct: false, reason: "Statutory remedies don't depend on victim requests." }
+                ],
+                explanation: "Strengthening arguments requires identifying what assumptions would make the conclusion logically follow. Removing exceptions strengthens mandatory application."
+            }
+        ];
+
+        initializeTest(lsatQuestions, 'LSAT Practice Test');
+    </script>
+</body>
+</html>

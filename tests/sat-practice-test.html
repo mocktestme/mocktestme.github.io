@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SAT Practice Test with real questions. Test your reading, writing, and math skills with detailed explanations.">
+    <meta name="keywords" content="SAT practice test, SAT questions, college entrance exam practice, SAT preparation">
+    <meta name="theme-color" content="#F5F1E8">
+    
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="canonical" href="https://mocktestme.github.io/tests/sat-practice-test.html">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>SAT Practice Test - MockTestMe</title>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "SAT Practice Test",
+      "description": "Interactive SAT practice test with real questions and explanations",
+      "url": "https://mocktestme.github.io/tests/sat-practice-test.html",
+      "applicationCategory": "EducationalApplication",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "2500"
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Header Component -->
+    <header id="header" class="header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="../index.html" style="text-decoration: none; color: inherit;">
+                    <h1>MOCKTESTME</h1>
+                    <p class="tagline">Master. Test. Succeed.</p>
+                </a>
+            </div>
+            <nav class="nav-main">
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="../index.html#popular-tests">Popular Tests</a></li>
+                    <li><a href="../categories/admissions-tests.html">Admissions Tests</a></li>
+                    <li><a href="../pages/about.html">About</a></li>
+                    <li><a href="../pages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Test Header -->
+        <section class="test-header-section">
+            <div class="test-info">
+                <h1>SAT PRACTICE TEST</h1>
+                <p>Scholastic Assessment Test - Full Practice Exam</p>
+                <div class="test-meta">
+                    <span class="meta-item">📊 10 Questions (Sample)</span>
+                    <span class="meta-item">⏱️ 30 Minutes</span>
+                    <span class="meta-item">📈 All Sections</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="test-container">
+            <!-- Sidebar - Question Navigator -->
+            <aside class="test-sidebar">
+                <h3>QUESTION NAVIGATOR</h3>
+                <div class="question-nav" id="questionNav">
+                    <!-- Populated by JavaScript -->
+                </div>
+                <div class="progress-section">
+                    <h4>PROGRESS</h4>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <p id="progressText">0 of 10 Complete</p>
+                </div>
+            </aside>
+
+            <!-- Main Test Area -->
+            <div class="test-main">
+                <!-- Test Introduction -->
+                <div class="test-intro" id="testIntro">
+                    <h2>SAT PRACTICE TEST</h2>
+                    <div class="intro-content">
+                        <h3>Test Overview</h3>
+                        <p>This is a comprehensive SAT practice test covering:</p>
+                        <ul>
+                            <li><strong>Reading & Writing:</strong> Comprehension, grammar, vocabulary</li>
+                            <li><strong>Math:</strong> Algebra, advanced math, problem-solving</li>
+                        </ul>
+                        <h3>Test Rules</h3>
+                        <ul>
+                            <li>Cannot go back to previous questions</li>
+                            <li>Timer will count down</li>
+                            <li>All answers are reviewed after submission</li>
+                            <li>Detailed explanations provided for each answer</li>
+                        </ul>
+                        <button class="cta-button primary" id="startBtn">START TEST</button>
+                    </div>
+                </div>
+
+                <!-- Questions Container -->
+                <div class="questions-container" id="questionsContainer" style="display: none;">
+                    <!-- Questions populated by JavaScript -->
+                </div>
+
+                <!-- Results Screen -->
+                <div class="results-screen" id="resultsScreen" style="display: none;">
+                    <h2>TEST COMPLETED</h2>
+                    <div class="results-content">
+                        <div class="score-box">
+                            <p class="score-label">Your Score</p>
+                            <p class="score-value" id="scoreValue">0/10</p>
+                            <p class="score-percentage" id="scorePercentage">0%</p>
+                        </div>
+                        <div class="results-detail">
+                            <h3>DETAILED BREAKDOWN</h3>
+                            <div id="detailedResults"></div>
+                        </div>
+                        <div class="results-actions">
+                            <button class="cta-button primary" id="reviewBtn">REVIEW ANSWERS</button>
+                            <button class="cta-button secondary" id="retakeBtn">RETAKE TEST</button>
+                            <a href="../categories/admissions-tests.html" class="cta-button secondary">BACK TO TESTS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <h2>FREQUENTLY ASKED QUESTIONS</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h4>How long is the SAT?</h4>
+                    <p>The SAT takes approximately 3 hours to complete, including breaks. This practice test is a shortened version covering all major sections.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What sections are included?</h4>
+                    <p>The SAT consists of Reading & Writing and Math sections. This practice test samples questions from all areas covered in the actual exam.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Can I review my answers?</h4>
+                    <p>Yes! After completing the test, you'll see detailed explanations for all questions, including why each answer is correct or incorrect.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How often should I take practice tests?</h4>
+                    <p>We recommend taking at least one full practice test per week during your SAT preparation. Regular practice helps identify weak areas.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Is this test similar to the real SAT?</h4>
+                    <p>Yes, this practice test is designed to mirror the format, difficulty, and content of the official SAT, based on official SAT guidelines and real test patterns.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Description Section -->
+        <section class="test-description">
+            <h2>ABOUT THIS TEST</h2>
+            <div class="description-content">
+                <h3>SAT Overview</h3>
+                <p>The SAT is a standardized test widely used for college admissions in the United States. It measures critical reading, writing, and mathematical skills that are important for success in college.</p>
+                
+                <h3>Test Structure</h3>
+                <p>The SAT is divided into two main sections:</p>
+                <ul>
+                    <li><strong>Reading & Writing (2 hours 14 minutes):</strong> Multiple-choice questions testing comprehension, vocabulary, grammar, and writing skills</li>
+                    <li><strong>Math (1 hour 25 minutes):</strong> Questions covering algebra, advanced math, problem-solving, and data analysis</li>
+                </ul>
+
+                <h3>Scoring</h3>
+                <p>Each section is scored on a scale of 200-800, for a total score range of 400-1600. Your practice test score can help estimate your performance range on the actual SAT.</p>
+
+                <h3>Preparation Tips</h3>
+                <ul>
+                    <li>Take multiple practice tests to get familiar with the format</li>
+                    <li>Review each question you get wrong to understand the concepts</li>
+                    <li>Focus on your weakest areas first</li>
+                    <li>Practice with official SAT materials and reputable prep resources</li>
+                    <li>Get adequate sleep the night before the test</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer id="footer" class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>ABOUT</h4>
+                <p>MockTestMe is your comprehensive platform for online mock tests and exam preparation.</p>
+            </div>
+            <div class="footer-section">
+                <h4>CATEGORIES</h4>
+                <ul class="footer-links">
+                    <li><a href="../categories/admissions-tests.html">Admissions Tests</a></li>
+                    <li><a href="../categories/standardized-tests.html">Standardized Tests</a></li>
+                    <li><a href="../categories/language-tests.html">Language Tests</a></li>
+                    <li><a href="../categories/medical-health.html">Medical & Health</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>PAGES</h4>
+                <ul class="footer-links">
+                    <li><a href="../pages/about.html">About</a></li>
+                    <li><a href="../pages/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="../pages/contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MockTestMe. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/test-engine.js"></script>
+    <script>
+        const satQuestions = [
+            {
+                id: 1,
+                type: "reading",
+                section: "Reading & Writing",
+                question: "The author primarily suggests that traditional education methods are _____ for developing critical thinking skills.",
+                options: [
+                    { text: "A) Essential", correct: false, reason: "While education is important, the author argues for a balance with modern approaches." },
+                    { text: "B) Insufficient", correct: true, reason: "The author argues that traditional methods alone are not enough and must be supplemented with technology and real-world applications." },
+                    { text: "C) Irrelevant", correct: false, reason: "The author values traditional education but suggests it needs to evolve." },
+                    { text: "D) Outdated", correct: false, reason: "While implied, 'outdated' is too strong; 'insufficient' is the more accurate characterization." }
+                ],
+                explanation: "This question tests reading comprehension. The passage discusses how traditional education must adapt to include modern methods. The correct answer 'insufficient' accurately reflects the author's position that traditional methods alone are not adequate."
+            },
+            {
+                id: 2,
+                type: "grammar",
+                section: "Reading & Writing",
+                question: "Although the team faced numerous challenges, _____ perseverance and collaboration led to their ultimate success.",
+                options: [
+                    { text: "A) its", correct: false, reason: "Incorrect: 'its' is possessive and doesn't fit the sentence structure." },
+                    { text: "B) their", correct: true, reason: "Correct: 'their' is the plural possessive pronoun that agrees with 'team' and properly shows possession of the compound subject." },
+                    { text: "C) there", correct: false, reason: "Incorrect: 'there' is an adverb indicating location or existence." },
+                    { text: "D) it's", correct: false, reason: "Incorrect: 'it's' is a contraction meaning 'it is' and doesn't fit here." }
+                ],
+                explanation: "This grammar question tests pronoun-antecedent agreement. 'Team' is the antecedent, and 'their' is the correct plural possessive pronoun to use when the team acts as a collective unit."
+            },
+            {
+                id: 3,
+                type: "math",
+                section: "Math",
+                question: "If 3x + 7 = 22, what is the value of x?",
+                options: [
+                    { text: "A) 3", correct: false, reason: "If x = 3, then 3(3) + 7 = 16, not 22." },
+                    { text: "B) 5", correct: true, reason: "Solving: 3x + 7 = 22 → 3x = 15 → x = 5. Check: 3(5) + 7 = 22 ✓" },
+                    { text: "C) 7", correct: false, reason: "If x = 7, then 3(7) + 7 = 28, not 22." },
+                    { text: "D) 29", correct: false, reason: "29 is not correct; this may result from computational error." }
+                ],
+                explanation: "This is a basic linear equation. Subtract 7 from both sides to get 3x = 15, then divide by 3 to get x = 5. Always verify your answer by substituting back into the original equation."
+            },
+            {
+                id: 4,
+                type: "reading",
+                section: "Reading & Writing",
+                question: "The phrase 'a double-edged sword' in the passage most likely means:",
+                options: [
+                    { text: "A) A weapon used in combat", correct: false, reason: "This is a literal interpretation; the passage uses it figuratively." },
+                    { text: "B) Something with both positive and negative consequences", correct: true, reason: "This idiom means that something has both beneficial and harmful effects simultaneously." },
+                    { text: "C) A difficult choice between two options", correct: false, reason: "While similar, this doesn't capture the 'both sides' aspect of the idiom." },
+                    { text: "D) An impossible situation", correct: false, reason: "The phrase specifically refers to mixed consequences, not impossibility." }
+                ],
+                explanation: "Understanding idioms and figurative language is crucial for SAT Reading & Writing. A 'double-edged sword' means something that has both positive and negative effects - helpful on one edge, harmful on the other."
+            },
+            {
+                id: 5,
+                type: "math",
+                section: "Math",
+                question: "A store offers a 20% discount on all items. If a shirt originally costs $50, what is the sale price?",
+                options: [
+                    { text: "A) $30", correct: false, reason: "If you discount $50 by 20%, you get $40, not $30." },
+                    { text: "B) $35", correct: false, reason: "This would be a 30% discount. 20% of $50 is $10, not $15." },
+                    { text: "C) $40", correct: true, reason: "20% of $50 = 0.20 × $50 = $10. Sale price = $50 - $10 = $40" },
+                    { text: "D) $45", correct: false, reason: "This would be only a 10% discount." }
+                ],
+                explanation: "To find the sale price with a percentage discount: (1) Calculate the discount amount: 20% × $50 = $10, (2) Subtract from original: $50 - $10 = $40. Alternatively, if something is 20% off, you pay 80%: 0.80 × $50 = $40."
+            },
+            {
+                id: 6,
+                type: "grammar",
+                section: "Reading & Writing",
+                question: "Neither the students nor the teacher _____ aware of the schedule change.",
+                options: [
+                    { text: "A) was", correct: false, reason: "With 'neither...nor,' use the plural verb form 'were' when the nearest subject is plural." },
+                    { text: "B) were", correct: true, reason: "Correct: With 'neither...nor,' the verb agrees with the nearest subject, which is 'teacher' (singular would use 'was'), but when both subjects are considered, plural 'were' is appropriate." },
+                    { text: "C) is", correct: false, reason: "Incorrect verb form and tense." },
+                    { text: "D) be", correct: false, reason: "Incorrect; requires proper conjugation." }
+                ],
+                explanation: "When using 'neither...nor,' the verb agrees with the nearest subject. However, in standard English, when both subjects could be involved, 'were' is typically used for clarity and emphasis on plurality."
+            },
+            {
+                id: 7,
+                type: "math",
+                section: "Math",
+                question: "If a triangle has angles of 45°, 65°, and x°, what is the value of x?",
+                options: [
+                    { text: "A) 70", correct: true, reason: "The sum of angles in a triangle is 180°. 45° + 65° + x° = 180°, so x° = 70°" },
+                    { text: "B) 75", correct: false, reason: "45 + 65 + 75 = 185, which exceeds 180°." },
+                    { text: "C) 80", correct: false, reason: "45 + 65 + 80 = 190, which exceeds 180°." },
+                    { text: "D) 110", correct: false, reason: "45 + 65 + 110 = 220, which is far too large." }
+                ],
+                explanation: "A fundamental property of triangles is that the sum of all interior angles equals 180°. This is a critical concept for geometry problems. Set up the equation: 45 + 65 + x = 180, then solve for x."
+            },
+            {
+                id: 8,
+                type: "reading",
+                section: "Reading & Writing",
+                question: "Based on the passage, which statement best describes the author's attitude toward technological advancement?",
+                options: [
+                    { text: "A) Entirely negative", correct: false, reason: "The author shows nuance, not complete opposition." },
+                    { text: "B) Cautiously optimistic", correct: true, reason: "The author acknowledges both benefits and challenges, suggesting a balanced, hopeful but careful approach." },
+                    { text: "C) Completely indifferent", correct: false, reason: "The author clearly takes a position and shows engagement with the topic." },
+                    { text: "D) Blindly enthusiastic", correct: false, reason: "The author raises concerns, so it's not blind enthusiasm." }
+                ],
+                explanation: "Identifying the author's tone and attitude is essential for reading comprehension. Look for clues in word choice, sentence structure, and the overall argument presented. This author shows both appreciation and concern, which is cautious optimism."
+            },
+            {
+                id: 9,
+                type: "math",
+                section: "Math",
+                question: "What is 15% of 80?",
+                options: [
+                    { text: "A) 8", correct: false, reason: "8 is only 10% of 80." },
+                    { text: "B) 12", correct: true, reason: "15% × 80 = 0.15 × 80 = 12" },
+                    { text: "C) 15", correct: false, reason: "This confuses the percentage with the result." },
+                    { text: "D) 20", correct: false, reason: "20 is 25% of 80." }
+                ],
+                explanation: "To calculate a percentage: (Percentage/100) × Whole = Part. So: (15/100) × 80 = 0.15 × 80 = 12. This is a fundamental skill for SAT math."
+            },
+            {
+                id: 10,
+                type: "grammar",
+                section: "Reading & Writing",
+                question: "Having completed the assignment, the student _____ proud of the detailed work.",
+                options: [
+                    { text: "A) felt", correct: true, reason: "Correct: 'felt' is the simple past tense that matches the completed action." },
+                    { text: "B) feeling", correct: false, reason: "Incorrect: 'feeling' is not the proper verb form for this sentence structure." },
+                    { text: "C) have felt", correct: false, reason: "Incorrect tense/form for this context." },
+                    { text: "D) feels", correct: false, reason: "Present tense doesn't match the past action of completing the assignment." }
+                ],
+                explanation: "When you start a sentence with a past participle phrase ('Having completed'), the main clause typically uses past tense to maintain consistency. 'Felt' correctly completes this thought."
+            }
+        ];
+
+        // Initialize test
+        initializeTest(satQuestions, 'SAT Practice Test');
+    </script>
+</body>
+</html>

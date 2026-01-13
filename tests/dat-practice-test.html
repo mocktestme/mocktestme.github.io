@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DAT Practice Test with real questions. Prepare for dental school with comprehensive exam practice.">
+    <meta name="keywords" content="DAT practice test, dental admission test, dental school entrance, DAT questions">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="canonical" href="https://mocktestme.github.io/tests/dat-practice-test.html">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/test-styles.css">
+    <title>DAT Practice Test - MockTestMe</title>
+</head>
+<body>
+    <header id="header" class="header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="../index.html" style="text-decoration: none; color: inherit;">
+                    <h1>MOCKTESTME</h1>
+                    <p class="tagline">Master. Test. Succeed.</p>
+                </a>
+            </div>
+            <nav class="nav-main">
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="../categories/admissions-tests.html">Admissions Tests</a></li>
+                    <li><a href="../pages/about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="test-header-section">
+            <div class="test-info">
+                <h1>DAT PRACTICE TEST</h1>
+                <p>Dental Admission Test - Practice Exam</p>
+                <div class="test-meta">
+                    <span class="meta-item">📊 9 Questions (Sample)</span>
+                    <span class="meta-item">⏱️ 30 Minutes</span>
+                    <span class="meta-item">📈 Science & Reasoning</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="test-container">
+            <aside class="test-sidebar">
+                <h3>QUESTION NAVIGATOR</h3>
+                <div class="question-nav" id="questionNav"></div>
+                <div class="progress-section">
+                    <h4>PROGRESS</h4>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <p id="progressText">0 of 9 Complete</p>
+                </div>
+            </aside>
+
+            <div class="test-main">
+                <div class="test-intro" id="testIntro">
+                    <h2>DAT PRACTICE TEST</h2>
+                    <div class="intro-content">
+                        <h3>Test Overview</h3>
+                        <p>The DAT consists of:</p>
+                        <ul>
+                            <li><strong>Natural Sciences:</strong> Biology, organic chemistry, general chemistry</li>
+                            <li><strong>Perceptual Ability:</strong> Spatial visualization and 2D/3D relationships</li>
+                            <li><strong>Reading Comprehension:</strong> Understanding dental and scientific passages</li>
+                            <li><strong>Quantitative Reasoning:</strong> Math and data analysis</li>
+                        </ul>
+                        <button class="cta-button primary" id="startBtn">START TEST</button>
+                    </div>
+                </div>
+
+                <div class="questions-container" id="questionsContainer" style="display: none;"></div>
+
+                <div class="results-screen" id="resultsScreen" style="display: none;">
+                    <h2>TEST COMPLETED</h2>
+                    <div class="results-content">
+                        <div class="score-box">
+                            <p class="score-label">Your Score</p>
+                            <p class="score-value" id="scoreValue">0/9</p>
+                            <p class="score-percentage" id="scorePercentage">0%</p>
+                        </div>
+                        <div class="results-detail">
+                            <h3>DETAILED BREAKDOWN</h3>
+                            <div id="detailedResults"></div>
+                        </div>
+                        <div class="results-actions">
+                            <button class="cta-button primary" id="reviewBtn">REVIEW ANSWERS</button>
+                            <button class="cta-button secondary" id="retakeBtn">RETAKE TEST</button>
+                            <a href="../categories/admissions-tests.html" class="cta-button secondary">BACK TO TESTS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="faq-section">
+            <h2>FREQUENTLY ASKED QUESTIONS</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h4>Is the DAT required for dental school?</h4>
+                    <p>Yes, the DAT is required for admission to virtually all accredited dental schools in North America. It's a critical component of your application.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What is a competitive DAT score?</h4>
+                    <p>DAT scores range from 1-30 with a mean of 17. Most dental schools prefer scores of 18+. Top schools often look for 20+.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How long should I study for the DAT?</h4>
+                    <p>Most students prepare for 2-3 months, studying 3-4 hours daily. The perceptual ability section requires the most additional practice.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Can I retake the DAT?</h4>
+                    <p>Yes, you can retake the DAT, but dental schools see all scores. Most applicants retake only once if necessary.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="test-description">
+            <h2>ABOUT THE DAT</h2>
+            <div class="description-content">
+                <h3>DAT Overview</h3>
+                <p>The Dental Admission Test measures academic knowledge and analytical ability in sciences relevant to dentistry. It's administered year-round at testing centers.</p>
+                <h3>Section Details</h3>
+                <ul>
+                    <li><strong>Natural Sciences (90 min, 100 items):</strong> General biology, organic chemistry, general chemistry</li>
+                    <li><strong>Perceptual Ability (60 min, 90 items):</strong> Most challenging section; spatial visualization</li>
+                    <li><strong>Reading Comprehension (50 min, 50 items):</strong> Scientific and dental literature</li>
+                    <li><strong>Quantitative Reasoning (45 min, 40 items):</strong> Math and data analysis</li>
+                </ul>
+                <h3>What Students Should Know</h3>
+                <ul>
+                    <li>The perceptual ability section is unlike anything tested before</li>
+                    <li>Chemistry (especially organic) is heavily emphasized</li>
+                    <li>The test is computerized and proctored</li>
+                    <li>Total test time is approximately 5 hours</li>
+                    <li>Early preparation helps with content review across science disciplines</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>CATEGORIES</h4>
+                <ul class="footer-links">
+                    <li><a href="../categories/admissions-tests.html">Admissions Tests</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MockTestMe. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/test-engine.js"></script>
+    <script>
+        const datQuestions = [
+            {
+                id: 1,
+                type: "biology",
+                section: "Natural Sciences",
+                question: "Which of the following organelles is responsible for producing ATP through cellular respiration?",
+                options: [
+                    { text: "A) Ribosome", correct: false, reason: "Ribosomes synthesize proteins, not ATP." },
+                    { text: "B) Mitochondrion", correct: true, reason: "Mitochondria are the powerhouse of the cell, producing ATP through oxidative phosphorylation." },
+                    { text: "C) Lysosome", correct: false, reason: "Lysosomes break down waste, but don't produce ATP." },
+                    { text: "D) Golgi apparatus", correct: false, reason: "The Golgi apparatus processes and packages proteins." }
+                ],
+                explanation: "This is foundational biology. Mitochondria are essential for energy production in eukaryotic cells."
+            },
+            {
+                id: 2,
+                type: "chemistry",
+                section: "Natural Sciences",
+                question: "What is the pH of a solution with [H+] = 1 × 10⁻⁵ M?",
+                options: [
+                    { text: "A) 2", correct: false, reason: "That would be 1 × 10⁻² M." },
+                    { text: "B) 3", correct: false, reason: "That would be 1 × 10⁻³ M." },
+                    { text: "C) 5", correct: true, reason: "pH = -log[H+] = -log(1 × 10⁻⁵) = 5" },
+                    { text: "D) 7", correct: false, reason: "pH 7 is neutral; this is slightly acidic." }
+                ],
+                explanation: "pH calculations are fundamental chemistry. Remember: pH = -log[H+]. This is a slightly acidic solution."
+            },
+            {
+                id: 3,
+                type: "biology",
+                section: "Natural Sciences",
+                question: "During which phase of meiosis do homologous chromosomes separate?",
+                options: [
+                    { text: "A) Meiosis I", correct: true, reason: "Homologous chromosomes separate during Anaphase I of Meiosis I." },
+                    { text: "B) Meiosis II", correct: false, reason: "Sister chromatids separate in Meiosis II." },
+                    { text: "C) Mitosis", correct: false, reason: "Mitosis is different from meiosis." },
+                    { text: "D) Prophase", correct: false, reason: "Prophase involves condensation, not separation." }
+                ],
+                explanation: "Understanding meiosis is crucial for the DAT biology section. Meiosis I is reductional; Meiosis II is similar to mitosis."
+            },
+            {
+                id: 4,
+                type: "chemistry",
+                section: "Natural Sciences",
+                question: "Which compound contains a primary alcohol functional group?",
+                options: [
+                    { text: "A) CH₃-CH(OH)-CH₃", correct: false, reason: "This is a secondary alcohol (OH on internal carbon)." },
+                    { text: "B) CH₃-CH₂-OH", correct: true, reason: "This is ethanol, a primary alcohol (OH on terminal carbon)." },
+                    { text: "C) (CH₃)₃C-OH", correct: false, reason: "This is a tertiary alcohol (OH on carbon bonded to 3 carbons)." },
+                    { text: "D) CH₃-O-CH₃", correct: false, reason: "This is an ether, not an alcohol." }
+                ],
+                explanation: "Organic chemistry requires understanding functional groups. Primary alcohols have OH on terminal carbons."
+            },
+            {
+                id: 5,
+                type: "biology",
+                section: "Natural Sciences",
+                question: "Which of the following is NOT a function of the liver?",
+                options: [
+                    { text: "A) Detoxification", correct: false, reason: "The liver detoxifies harmful substances." },
+                    { text: "B) Glucose homeostasis", correct: false, reason: "The liver stores and regulates glucose." },
+                    { text: "C) Oxygen transport", correct: true, reason: "Oxygen transport is the function of hemoglobin in red blood cells, not the liver." },
+                    { text: "D) Protein synthesis", correct: false, reason: "The liver synthesizes plasma proteins." }
+                ],
+                explanation: "The liver has many functions, but oxygen transport is handled by blood proteins. This tests knowledge of organ systems."
+            },
+            {
+                id: 6,
+                type: "chemistry",
+                section: "Natural Sciences",
+                question: "What is the molecular geometry of CH₄ (methane)?",
+                options: [
+                    { text: "A) Linear", correct: false, reason: "Linear molecules have a 180° bond angle." },
+                    { text: "B) Trigonal planar", correct: false, reason: "This geometry has sp² hybridization." },
+                    { text: "C) Tetrahedral", correct: true, reason: "CH₄ has sp³ hybridization, resulting in tetrahedral geometry (109.5° angles)." },
+                    { text: "D) Trigonal pyramidal", correct: false, reason: "This geometry applies to NH₃." }
+                ],
+                explanation: "VSEPR theory and hybridization are essential for understanding molecular geometry. Methane is perfectly tetrahedral."
+            },
+            {
+                id: 7,
+                type: "biology",
+                section: "Natural Sciences",
+                question: "What is the function of the enamel on teeth?",
+                options: [
+                    { text: "A) Provide flexibility to teeth", correct: false, reason: "Dentin provides flexibility." },
+                    { text: "B) Protect against decay and wear", correct: true, reason: "Enamel is the hardest substance in the body and protects teeth." },
+                    { text: "C) Transmit sensations", correct: false, reason: "Dentin does this." },
+                    { text: "D) Supply blood to teeth", correct: false, reason: "Pulp provides blood supply." }
+                ],
+                explanation: "Dental anatomy is particularly relevant to the DAT. Enamel is crucial for tooth protection and longevity."
+            },
+            {
+                id: 8,
+                type: "quantitative",
+                section: "Quantitative Reasoning",
+                question: "If a medication is dosed at 2.5 mg/kg of body weight, how many mg should a 70 kg patient receive?",
+                options: [
+                    { text: "A) 140 mg", correct: false, reason: "Calculation error; 2.5 × 70 = 175, not 140." },
+                    { text: "B) 160 mg", correct: false, reason: "Incorrect." },
+                    { text: "C) 175 mg", correct: true, reason: "2.5 mg/kg × 70 kg = 175 mg" },
+                    { text: "D) 190 mg", correct: false, reason: "Too high." }
+                ],
+                explanation: "Dosage calculations are practical and important. Multiply the weight by the dose per kg to find total dose."
+            },
+            {
+                id: 9,
+                type: "reading",
+                section: "Reading Comprehension",
+                question: "Based on the passage, the author suggests that modern dental practices _____ traditional methods.",
+                options: [
+                    { text: "A) completely replace", correct: false, reason: "The passage suggests integration, not replacement." },
+                    { text: "B) complement and enhance", correct: true, reason: "The passage indicates modern methods work alongside traditional approaches." },
+                    { text: "C) invalidate", correct: false, reason: "Traditional methods retain validity." },
+                    { text: "D) have nothing in common with", correct: false, reason: "The passage shows continuity." }
+                ],
+                explanation: "Reading comprehension on the DAT requires careful attention to the author's tone and main argument about the relationship between modern and traditional practices."
+            }
+        ];
+
+        initializeTest(datQuestions, 'DAT Practice Test');
+    </script>
+</body>
+</html>
